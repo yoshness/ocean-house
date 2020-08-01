@@ -1,0 +1,32 @@
+//antialiased,subpixel-antialiased,none
+$font-smoothing: antialiased;
+
+//auto,optimizeSpeed,optimizeLegibility,geometricPrecision
+$text-rendering: auto;
+
+$base-font-family: 'Noto Serif JP', serif;
+$base-font-size: 14px;
+$base-font-color: #151515;
+$base-background-color: #fff;
+
+$site-size: 730px + 60;
+
+// colors
+$color-primary: #3b19a7; // violet
+
+// easing / animation
+$duration: .4s;
+$duration-long: .7s;
+$easing: ease-in-out;
+$delay: .35s;
+
+//breakpoints
+$breakpoint-mobile: 767px;
+$breakpoint-wide: 1600px;
+
+//path
+$path-assets: "/wp-content/themes/oceanhouse/assets";
+$path-image: "#{$path-assets}/images";
+$path-font: "#{$path-assets}/fonts";
+
+$font-hira: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', sans-serif;
