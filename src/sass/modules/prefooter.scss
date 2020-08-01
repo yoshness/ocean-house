@@ -1,0 +1,63 @@
+.prefooter {
+    font-family: $font-hira;
+
+    padding: 90px 170px;
+
+    text-align: center;
+    letter-spacing: .1em;
+
+    color: #fff;
+    background-color: #171a1d;
+}
+
+.prefooter__title {
+    font-size: 25px;
+
+    margin-bottom: 80px;
+}
+
+.prefooter__cta {
+    text-align: center;
+}
+
+.prefooter__cta-contact,
+.prefooter__cta-call {
+    width: 40%;
+}
+
+.prefooter__cta-ja {
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+.prefooter__cta-en {
+    margin-bottom: 40px;
+
+    text-transform: uppercase;
+}
+
+.prefooter__cta-link {
+    font-size: 12px;
+
+    display: block;
+
+    width: 100%;
+    padding: 15px 0;
+
+    transition: all $duration $easing;
+    text-align: center;
+
+    color: #fff;
+    border: 1px solid #fff;
+    background-image: linear-gradient(to left, transparent 0, #171a1d 100%);
+    background-position: 99% 0;
+    background-size: 200% 100%;
+
+    &:hover {
+        color: #000;
+        background-image: linear-gradient(to left, transparent, transparent 50%, #fff 50%, #fff);
+        background-position: 0 0;
+        background-size: 200% 100%;
+    }
+}

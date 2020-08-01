@@ -1,0 +1,59 @@
+.logo {
+    position: relative;
+
+    width: 13%;
+    height: 800px;
+    padding: 20px;
+
+    background-color: #fff;
+
+    align-self: baseline;
+}
+.logo__img {
+    width: 100%;
+    height: auto;
+}
+.logo__scroll {
+    font-family: $font-hira;
+
+    position: absolute;
+    bottom: 150px;
+    left: 45%;
+
+    display: block;
+
+    transform: rotate(90deg) translateY(100%);
+    letter-spacing: .1em;
+
+    color: #000;
+
+    &:after {
+        position: absolute;
+        top: 50%;
+        left: 75px;
+
+        display: block;
+
+        width: 55px;
+        height: 1px;
+
+        content: '';
+        transform: translateY(-50%);
+        animation: scroll-anim 1.5s ease-in-out infinite;
+
+        background-color: #000;
+    }
+}
+
+@keyframes scroll-anim {
+    0% {
+        top: 50%;
+
+        width: 0;
+    }
+    100% {
+        top: 50%;
+
+        width: 55px;
+    }
+}

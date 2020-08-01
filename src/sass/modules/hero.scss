@@ -1,3 +1,26 @@
 .hero {
+    position: relative;
+
+    width: 87%;
+    height: 800px;
+
     color: red;
+    background-image: url(#{$path-image}/index/hero-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.hero__title {
+    font-family: $font-hira;
+    font-size: 49px;
+
+    position: relative;
+    top: 50%;
+
+    transform: translateY(-50%);
+    text-align: center;
+    letter-spacing: .1em;
+
+    color: #fff;
 }

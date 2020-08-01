@@ -6,7 +6,7 @@ const SRC_JS = 'src/js',
       ASSETS_FOLDER = './wp-content/themes/oceanhouse/assets';
 
 mix.sass(`${SRC_CSS}/style.scss`, ASSETS_FOLDER)
-   // .js(`${SRC_JS}/app.js`, ASSETS_FOLDER)
+   .js(`${SRC_JS}/app.js`, ASSETS_FOLDER)
    .options({
       processCssUrls: false
    })

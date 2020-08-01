@@ -12,5 +12,11 @@
  */
 ?>
 		<?php wp_footer(); ?>
+
+		<footer class="footer">
+			<small class="footer__text">Copyright © 2020 OCEAN HOUSE Inc. All Rihts Reserved.</small>
+		</footer>
+		
+		<script src="<?php echo get_template_directory_uri(); ?>/assets/app.js"></script>
 	</body>
 </html>
