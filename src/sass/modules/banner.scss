@@ -1,0 +1,18 @@
+.banner {
+    align-items: initial;
+
+    .logo {
+        height: 625px;
+    }
+}
+
+.banner__img {
+    position: relative;
+
+    width: 87%;
+    height: 500px;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}

@@ -20,7 +20,9 @@ get_header();
 <main class="l-index">
 	<div class="l-index__top u-flex">
 		<div class="logo">
-			<img class="logo__img" src="<?php echo IMAGE_URL; ?>logo.png">
+			<a href="<?php echo HOME_URL; ?>">
+				<img class="logo__img" src="<?php echo IMAGE_URL; ?>logo.png">
+			</a>
 			<a class="logo__scroll" href="#">SCROLL</a>
 		</div>
 		<div class="hero">
@@ -29,11 +31,11 @@ get_header();
 			</h1>
 		</div>
 	</div>
-	<section class="l-index__about u-flex">
-		<div class="l-index__about-image">
-			<img class="logo__img" src="<?php echo IMAGE_URL; ?>index/concept-1.jpg">
+	<section class="l-index__concept u-flex">
+		<div class="l-index__concept-image">
+			<img src="<?php echo IMAGE_URL; ?>index/concept.jpg">
 		</div>
-		<div class="l-index__about-content">
+		<div class="l-index__concept-content">
 			<h2 class="section-title">
 				<span class="section-title__en">CONCEPT</span>
 				<span class="section-title__ja">好きなところに、住もう。</span>
@@ -51,7 +53,7 @@ get_header();
 	</section>
 	<section class="l-index__point u-flex">
 		<div class="l-index__point-image">
-			<img class="logo__img" src="<?php echo IMAGE_URL; ?>index/concept-1.jpg">
+			<img src="<?php echo IMAGE_URL; ?>index/point.jpg">
 		</div>
 		<div class="l-index__point-content">
 			<h2 class="section-title">

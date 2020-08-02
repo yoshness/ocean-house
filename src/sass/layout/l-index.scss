@@ -1,21 +1,26 @@
-.l-index__about,
+.l-index__concept,
 .l-index__point {
     padding-top: 150px;
 }
 
-.l-index__about-image,
+.l-index__concept-image,
 .l-index__point-image {
     width: 45%;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
-.l-index__about-content,
+.l-index__concept-content,
 .l-index__point-content {
     width: 45%;
 
     p {
         line-height: 2.5;
 
-        margin-top: 40px;
+        margin-top: 25px;
     }
 }
 

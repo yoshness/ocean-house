@@ -1,0 +1,52 @@
+.l-concept__flow-list {
+    &.is-active {
+        li {
+            &:first-child {
+                &:after {
+                    right: -16px;
+                }
+            }
+            &:nth-child(2) {
+                transition-delay: .5s;
+
+                &:after {
+                    right: -16px;
+                }
+            }
+            &:nth-child(3) {
+                transition-delay: 1s;
+
+                &:after {
+                    bottom: -29px;
+                }
+            }
+            &:nth-child(4) {
+                transition-delay: 1.5s;
+
+                &:after {
+                    left: -16px;
+                }
+            }
+            &:nth-child(5) {
+                transition-delay: 2s;
+
+                &:after {
+                    left: -16px;
+                }
+            }
+            &:nth-child(6) {
+                transition-delay: 2.5s;
+
+                &:before {
+                    height: 140px;
+                }
+                &:after {
+                    width: 140px;
+                }
+            }
+            &:nth-child(7) {
+                transition-delay: 3.2s;
+            }
+        }
+    }
+}
