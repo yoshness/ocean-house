@@ -569,6 +569,64 @@ textarea {
   margin-bottom: 10px;
 }
 
+.policy {
+  line-height: 2;
+  text-align: left;
+}
+
+.policy ol {
+  list-style-type: decimal;
+}
+
+.policy ol li {
+  margin-bottom: 45px;
+  margin-left: 17px;
+}
+
+.link-arrow {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  color: #151515;
+  border-bottom: 1px solid #000;
+}
+
+.link-arrow:before {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  display: block;
+  width: 12px;
+  height: 1px;
+  content: '';
+  transition: width 0.3s ease-in-out, left 0.1s ease-in-out 0.3s;
+  transform: translateY(-50%);
+  background-color: #151515;
+}
+
+.link-arrow:after {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  display: block;
+  width: 4px;
+  height: 4px;
+  content: '';
+  transition: left 0.1s ease-in-out 0.3s;
+  transform: translateY(-50%) rotate(45deg);
+  border-bottom: 1px solid #151515;
+  border-left: 1px solid #151515;
+}
+
+.link-arrow:hover:before, .link-arrow:hover:after {
+  left: -5px;
+}
+
+.link-arrow:hover:before {
+  width: 18px;
+}
+
 .l-concept__flow-list.is-active li:first-child:after {
   right: -16px;
 }
@@ -1129,8 +1187,6 @@ textarea {
 }
 
 .l-company__content {
-  width: 970px;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -1139,46 +1195,17 @@ textarea {
 }
 
 .l-company__content-link {
-  position: relative;
-  display: inline-block;
   margin: 80px 0 150px;
-  padding-bottom: 15px;
-  padding-left: 25px;
-  color: #151515;
-  border-bottom: 1px solid #000;
 }
 
-.l-company__content-link:before {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  display: block;
-  width: 12px;
-  height: 1px;
-  content: '';
-  transition: width 0.3s ease-in-out, left 0.1s ease-in-out 0.3s;
-  transform: translateY(-50%);
-  background-color: #151515;
+.l-privacy__content {
+  text-align: center;
 }
 
-.l-company__content-link:after {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  display: block;
-  width: 4px;
-  height: 4px;
-  content: '';
-  transition: left 0.1s ease-in-out 0.3s;
-  transform: translateY(-50%) rotate(45deg);
-  border-bottom: 1px solid #151515;
-  border-left: 1px solid #151515;
+.l-privacy__content h2 {
+  margin-bottom: 80px;
 }
 
-.l-company__content-link:hover:before, .l-company__content-link:hover:after {
-  left: -5px;
-}
-
-.l-company__content-link:hover:before {
-  width: 18px;
+.l-privacy__content-link {
+  margin: 80px 0 150px;
 }
