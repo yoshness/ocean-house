@@ -26,9 +26,26 @@ get_header();
 			<a class="logo__scroll" href="#">SCROLL</a>
 		</div>
 		<div class="hero">
+			<ul class="hero__slider" id="js-hero-slider">
+				<li class="hero__slider-item">
+					<div style="background-image: url(<?php echo IMAGE_URL; ?>index/hero-1.jpg);"></div>
+				</li>
+				<li class="hero__slider-item">
+					<div style="background-image: url(<?php echo IMAGE_URL; ?>index/hero-2.jpg);"></div>
+				</li>
+				<li class="hero__slider-item">
+					<div style="background-image: url(<?php echo IMAGE_URL; ?>index/hero-3.jpg);"></div>
+				</li>
+			</ul>
 			<h1 class="hero__title">
 				オーシャンハウス。<br>自分らしさの大海原へ
 			</h1>
+			<div class="hero__tagline">
+				<p>LIVE WITH THE SEA</p><p>海と住む</p>
+			</div>
+			<div class="hero__progress js-slider-progress">
+				<span></span>
+			</div>
 		</div>
 	</div>
 	<section class="l-index__concept u-flex">

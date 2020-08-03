@@ -10975,11 +10975,57 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__modules_init_sliders__["a" /*
 
 
 function initSliders() {
+
+	var time = 2;
+	var $bar = $('.js-slider-progress span'),
+	    isPause = void 0,
+	    tick = void 0,
+	    percentTime = void 0;
+
+	$('#js-hero-slider').slick({
+		arrows: false,
+		dots: false,
+		fade: true,
+		autoplay: true,
+		autoplaySpeed: 10000,
+		pauseOnHover: false,
+		infinite: true,
+		speed: 1000,
+		cssEase: 'ease-out'
+	});
+
+	function startProgressbar() {
+		resetProgressbar();
+		percentTime = 0;
+		isPause = false;
+		tick = setInterval(interval, 30);
+	}
+	function interval() {
+		if (isPause === false) {
+			percentTime += 1 / (time + 0.1);
+			$bar.css({
+				width: percentTime + '%'
+			});
+			if (percentTime >= 100) {
+				$('#js-hero-slider').slick('slickNext');
+				startProgressbar();
+			}
+		}
+	}
+	function resetProgressbar() {
+		$bar.css({
+			width: 0 + '%'
+		});
+		clearTimeout(tick);
+	}
+	startProgressbar();
+
 	$('#js-works-slider').slick({
 		arrows: false,
 		dots: false,
 		autoplay: true,
 		autoplaySpeed: 2000,
+		pauseOnHover: false,
 		infinite: true,
 		speed: 1000,
 		cssEase: 'ease-out',
