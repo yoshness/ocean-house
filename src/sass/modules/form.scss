@@ -1,8 +1,40 @@
 .form {
     text-align: left;
+
+    //contact page
+    .mw_wp_form_input {
+        .form-submit,
+        .form__back {
+            display: none;
+        }
+        .error {
+            position: absolute;
+            bottom: 25px;
+            left: 28%;
+        }
+    }
+
+    // confirm page
+    .mw_wp_form_confirm {
+        .form__item {
+            justify-content: initial;
+
+            label {
+                top: 0;
+
+                margin-right: 80px;
+            }
+        }
+        .form__privacy,
+        .form__checkbox {
+            display: none;
+        }
+    }
 }
 
 .form__item {
+    position: relative;
+
     padding: 50px 0;
 
     border-bottom: 1px solid #ececec;

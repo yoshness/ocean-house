@@ -6,6 +6,8 @@
     padding-bottom: 15px;
     padding-left: 25px;
 
+    cursor: pointer;
+
     color: $base-font-color;
     border-bottom: 1px solid #000;
 
@@ -52,5 +54,11 @@
         &:before {
             width: 18px;
         }
+    }
+
+    input[name='submitBack'] {
+        cursor: pointer;
+
+        outline: none;
     }
 }

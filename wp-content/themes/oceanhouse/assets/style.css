@@ -633,7 +633,34 @@ textarea {
   text-align: left;
 }
 
+.form .mw_wp_form_input .form-submit,
+.form .mw_wp_form_input .form__back {
+  display: none;
+}
+
+.form .mw_wp_form_input .error {
+  position: absolute;
+  bottom: 25px;
+  left: 28%;
+}
+
+.form .mw_wp_form_confirm .form__item {
+  -ms-flex-pack: initial;
+      justify-content: initial;
+}
+
+.form .mw_wp_form_confirm .form__item label {
+  top: 0;
+  margin-right: 80px;
+}
+
+.form .mw_wp_form_confirm .form__privacy,
+.form .mw_wp_form_confirm .form__checkbox {
+  display: none;
+}
+
 .form__item {
+  position: relative;
   padding: 50px 0;
   border-bottom: 1px solid #ececec;
   -ms-flex-align: initial;
@@ -832,6 +859,7 @@ textarea {
   display: inline-block;
   padding-bottom: 15px;
   padding-left: 25px;
+  cursor: pointer;
   color: #151515;
   border-bottom: 1px solid #000;
 }
@@ -869,6 +897,11 @@ textarea {
 
 .link-arrow:hover:before {
   width: 18px;
+}
+
+.link-arrow input[name='submitBack'] {
+  cursor: pointer;
+  outline: none;
 }
 
 .l-concept__flow-list.is-active li:first-child:after {
