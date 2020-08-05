@@ -385,6 +385,14 @@ textarea {
   position: relative;
   width: 87%;
   height: 800px;
+  -webkit-transition: -webkit-filter 1.5s ease-in-out, opacity 0.7s ease-in-out;
+  opacity: 0;
+  filter: blur(10px) saturate(0.1);
+}
+
+.hero.is-shown {
+  opacity: 1;
+  filter: none;
 }
 
 .hero__slider-item div {
@@ -413,7 +421,13 @@ textarea {
   position: absolute;
   bottom: 40px;
   left: 35px;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 0;
   color: #fff;
+}
+
+.hero__tagline.is-shown {
+  opacity: 1;
 }
 
 .hero__tagline p {
@@ -430,8 +444,14 @@ textarea {
   left: 0;
   width: 100%;
   height: 1px;
+  transition: opacity 0.25s ease-in-out;
   opacity: .4;
+  opacity: 0;
   background-color: #afbabf;
+}
+
+.hero__progress.is-shown {
+  opacity: 1;
 }
 
 .hero__progress span {
@@ -453,9 +473,18 @@ textarea {
   width: 13%;
   height: 800px;
   padding: 20px;
+  transition: opacity 0.25s ease-in-out;
   background-color: #fff;
   -ms-flex-item-align: baseline;
       align-self: baseline;
+}
+
+.l-index .logo {
+  opacity: 0;
+}
+
+.logo.is-shown {
+  opacity: 1;
 }
 
 .logo__img {
@@ -500,6 +529,8 @@ textarea {
 
 .section-title {
   font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 .section-title__en {
@@ -1021,6 +1052,59 @@ textarea {
   letter-spacing: .1em;
 }
 
+.blur-text__letter {
+  display: inline-block;
+  transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+  transform: translateY(2rem);
+  opacity: 0;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+}
+
+.blur-text.is-shown .blur-text__letter {
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
+.blur-image {
+  -webkit-transition: -webkit-filter 1s ease-in-out 1.5s;
+  filter: blur(5px) saturate(0.1);
+}
+
+.blur-image.is-colored {
+  filter: none;
+}
+
+.activate-text {
+  position: relative;
+  z-index: 1;
+  transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 1.5s;
+  transform: translateX(-50px);
+  opacity: 0;
+}
+
+.activate-text.is-shown {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.activate-box:before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  transition: background-color 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 1.5s;
+}
+
+.activate-box.is-shown:before {
+  background-color: #fff;
+}
+
 .l-container {
   position: relative;
   width: 1060px;
@@ -1182,12 +1266,23 @@ textarea {
 }
 
 .l-index__reasons-item div {
+  position: relative;
   width: 100%;
   height: 330px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  filter: brightness(70%);
+}
+
+.l-index__reasons-item div:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .l-index__reasons-item h3 {
@@ -1255,7 +1350,6 @@ textarea {
   right: -150px;
   width: 38%;
   padding: 40px 140px 80px 0;
-  background-color: #fff;
 }
 
 .l-concept__thoughts-content p,
@@ -1329,7 +1423,9 @@ textarea {
   position: relative;
   width: 30.7%;
   margin-bottom: 40px;
-  transition: opacity 0.25s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  transform: translateY(30px);
+  opacity: 0;
 }
 
 .l-concept__flow-list li:after {
@@ -1455,6 +1551,7 @@ textarea {
 }
 
 .l-concept__flow-list.is-active li {
+  transform: translateY(0);
   opacity: 1;
 }
 

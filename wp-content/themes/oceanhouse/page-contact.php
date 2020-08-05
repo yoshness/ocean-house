@@ -16,22 +16,23 @@ get_header();
 		</div>
 		<div class="banner__img" style="background-image: url(<?php echo IMAGE_URL; ?>contact/banner.jpg);"></div>
 	</div>
-	<div class="l-contact__content">
+	<div class="l-contact__content js-scroll-activate">
 		<div class="l-container">
 			<h2 class="section-title">
-				<span class="section-title__en">CONTACT</span>
-				<span class="section-title__ja">お問い合わせ</span>
+				<span class="section-title__en blur-text js-separate-letters">CONTACT</span>
+				<span class="section-title__ja blur-text js-separate-letters">お問い合わせ</span>
 			</h2>
-			<div class="l-contact__content-description">
-				オーシャンハウスは東京、神奈川、埼玉、千葉で対応可能です。<br>あなたの理想の暮らしを、お聞かせください。
-			</div>
-			<div class="l-contact__content-form">
-				<div class="form">
-					<?php echo do_shortcode('[mwform_formkey key="20"]'); ?>
+			<div class="activate-text">
+				<div class="l-contact__content-description">
+					オーシャンハウスは東京、神奈川、埼玉、千葉で対応可能です。<br>あなたの理想の暮らしを、お聞かせください。
+				</div>
+				<div class="l-contact__content-form">
+					<div class="form">
+						<?php echo do_shortcode('[mwform_formkey key="20"]'); ?>
+					</div>
 				</div>
 			</div>
 		</div>
-		
 	</div>
 </main>
 

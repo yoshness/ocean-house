@@ -5,9 +5,20 @@
     height: 800px;
     padding: 20px;
 
+    transition: opacity $duration $easing;
+
     background-color: #fff;
 
     align-self: baseline;
+
+    // only for home page
+    .l-index & {
+        opacity: 0;
+    }
+
+    &.is-shown {
+        opacity: 1;
+    }
 }
 .logo__img {
     width: 100%;

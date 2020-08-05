@@ -1,5 +1,8 @@
 .section-title {
     font-family: $font-hira;
+
+    position: relative;
+    z-index: 1;
 }
 .section-title__en {
     font-size: 12px;

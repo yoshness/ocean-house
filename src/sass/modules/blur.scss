@@ -1,0 +1,30 @@
+.blur-text__letter {
+    display: inline-block;
+
+    transition: all .8s cubic-bezier(.165, .84, .44, 1) 0s;
+    transform: translateY(2rem);
+
+    opacity: 0;
+
+            filter: blur(10px);
+    -webkit-filter: blur(10px);
+
+    .blur-text.is-shown & {
+        transform: translateY(0);
+
+        opacity: 1;
+
+        -webkit-filter: blur(0);
+                filter: blur(0);
+    }
+}
+
+.blur-image {
+    -webkit-transition: -webkit-filter 1s $easing 1.5s;
+
+    filter: blur(5px) saturate(.1);
+
+    &.is-colored {
+        filter: none;
+    }
+}

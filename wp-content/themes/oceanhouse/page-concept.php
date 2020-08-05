@@ -6,7 +6,7 @@ get_header();
 
 ?>
 
-<main class="l-concept">
+<main class="l-concept" id="js-concept-page">
 	<div class="banner u-flex">
 		<div class="logo">
 			<a href="<?php echo HOME_URL; ?>">
@@ -16,69 +16,73 @@ get_header();
 		</div>
 		<div class="banner__img" style="background-image: url(<?php echo IMAGE_URL; ?>concept/banner.jpg);"></div>
 	</div>
-	<section class="l-concept__intro">
+	<section class="l-concept__intro js-scroll-activate">
 		<div class="l-concept__intro-text">
 			<h2 class="section-title">
-				<span class="section-title__ja">オーシャンハウスとは</span>
+				<span class="section-title__ja blur-text js-separate-letters">オーシャンハウスとは</span>
 			</h2>
-			<p>
+			<p class="activate-text">
 				テキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキスト
 			</p>
 		</div>
-		<img src="<?php echo IMAGE_URL; ?>concept/intro.jpg" alt="">
+		<img class="blur-image" src="<?php echo IMAGE_URL; ?>concept/intro.jpg" alt="">
 	</section>
-	<section class="l-concept__thoughts u-flex">
-		<div class="l-concept__thoughts-content">
+	<section class="l-concept__thoughts u-flex js-scroll-activate">
+		<div class="l-concept__thoughts-content activate-box">
 			<h2 class="section-title">
-				<span class="section-title__en">OUR THOUGHTS</span>
-				<span class="section-title__ja">家づくりへの想い</span>
+				<span class="section-title__en blur-text js-separate-letters">OUR THOUGHTS</span>
+				<span class="section-title__ja blur-text js-separate-letters">家づくりへの想い</span>
 			</h2>
-			<p>
-				<strong>その壱. テキストテキストテキスト</strong><br>
-				テキストが入ります、テキストが入ります、テキストが入ります、
-			</p>
-			<p>
-				<strong>その弐. テキストテキストテキストテキスト</strong><br>
-				テキストが入ります、テキストが入ります、テキストが入ります、
-			</p>
-			<p>
-				<strong>その参. テキストテキストテキスト</strong><br>
-				テキストが入ります、テキストが入ります、テキストが入ります、
-			</p>
+			<div class="activate-text">
+				<p>
+					<strong>その壱. テキストテキストテキスト</strong><br>
+					テキストが入ります、テキストが入ります、テキストが入ります、
+				</p>
+				<p>
+					<strong>その弐. テキストテキストテキストテキスト</strong><br>
+					テキストが入ります、テキストが入ります、テキストが入ります、
+				</p>
+				<p>
+					<strong>その参. テキストテキストテキスト</strong><br>
+					テキストが入ります、テキストが入ります、テキストが入ります、
+				</p>
+			</div>
 		</div>
 		<div class="l-concept__thoughts-image">
-			<img src="<?php echo IMAGE_URL; ?>concept/thoughts.jpg">
+			<img class="blur-image" src="<?php echo IMAGE_URL; ?>concept/thoughts.jpg">
 		</div>
 	</section>
-	<section class="l-concept__order u-flex">
-		<div class="l-concept__order-content">
+	<section class="l-concept__order u-flex js-scroll-activate">
+		<div class="l-concept__order-content activate-box">
 			<h2 class="section-title">
-				<span class="section-title__en">ORDER MADE</span>
-				<span class="section-title__ja">オーダーメイドのこだわり</span>
+				<span class="section-title__en blur-text js-separate-letters">ORDER MADE</span>
+				<span class="section-title__ja blur-text js-separate-letters">オーダーメイドのこだわり</span>
 			</h2>
-			<p>
-				<strong>実現に導く、叶えたい理想の物件を</strong>
-			</p>
-			<p>
-				テキストが入ります、テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、テキストが入ります、
-			</p>
+			<div class="activate-text">
+				<p>
+					<strong>実現に導く、叶えたい理想の物件を</strong>
+				</p>
+				<p >
+					テキストが入ります、テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、テキストが入ります、
+				</p>
+			</div>
 		</div>
 		<div class="l-concept__order-image">
-			<img src="<?php echo IMAGE_URL; ?>concept/order.jpg">
+			<img class="blur-image" src="<?php echo IMAGE_URL; ?>concept/order.jpg">
 		</div>
 	</section>
-	<section class="l-concept__specs">
+	<section class="l-concept__specs js-scroll-activate">
 		<div class="l-container">
 			<h2 class="section-title">
-				<span class="section-title__ja">技術と環境性能</span>
+				<span class="section-title__ja blur-text js-separate-letters">技術と環境性能</span>
 			</h2>
-			<p>
+			<p class="activate-text">
 				ずっと住み続けたい、そんな家をつくる<br>
 				建てた後に、嫌な思いはしたくない — その気持ちは皆、共通です。<br>
 				だからこそ、オーシャンハウスが出がける物件は、<br>
 				高いデザイン性だけでなく、耐震強度・環境対応・高齢化社会への対応を考慮します。<br>
 			</p>
-			<ul class="l-concent__specs-list u-flex">
+			<ul class="l-concent__specs-list u-flex blur-image">
 				<li>
 					<div class="spec-block">
 						<img src="<?php echo IMAGE_URL; ?>concept/specs-1.jpg">
@@ -106,23 +110,23 @@ get_header();
 			</ul>
 		</div>
 	</section>
-	<section class="l-concept__support">
+	<section class="l-concept__support js-scroll-activate">
 		<div class="l-container">
 			<h2 class="section-title">
-				<span class="section-title__ja">安心のアフターサポート</span>
+				<span class="section-title__ja blur-text js-separate-letters">安心のアフターサポート</span>
 			</h2>
-			<p>
+			<p class="activate-text">
 				当社アフターサービス基準に則り、最大30年間にわたり住宅品質を保証しています。<br>お客様が保証期間の延長をご希望される場合、延長保証点検および、<br>有料メンテナンス工事を実施することで、基礎、躯体などの長期保証部位について、<br>さらに10年間延長し、お引き渡しより最大30年保証いたします。
 			</p>
-			<img src="<?php echo IMAGE_URL; ?>concept/support.jpg">
+			<img class="blur-image" src="<?php echo IMAGE_URL; ?>concept/support.jpg">
 		</div>
 	</section>
-	<section class="l-concept__flow">
+	<section class="l-concept__flow js-scroll-activate">
 		<div class="l-container">
 			<h2 class="section-title">
-				<span class="section-title__ja">建築の流れ</span>
+				<span class="section-title__ja blur-text js-separate-letters">建築の流れ</span>
 			</h2>
-			<ul class="l-concept__flow-list u-flex">
+			<ul class="l-concept__flow-list u-flex js-scroll-activate">
 				<li>
 					<div class="flow-block">
 						<span class="flow-block__step">STEP 1</span>
