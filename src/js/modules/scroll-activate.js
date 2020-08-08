@@ -1,9 +1,13 @@
+import 'slick-carousel';
+
 export default function scrollActivate() {
     const $el = $('.js-scroll-activate'),
           BREAKPOINT_MOBILE = 768,
           IS_ACTIVE = 'is-active',
           IS_SHOWN = 'is-shown',
           IS_COLORED = 'is-colored';
+
+    let pointSliderInitialized = false;
 
     // fade-in-up on scroll
     $(window).on('load, scroll', () => {
@@ -31,6 +35,10 @@ export default function scrollActivate() {
                 $(target).find('.blur-image').addClass(IS_COLORED);
                 $(target).find('.activate-text').addClass(IS_SHOWN);
                 $(target).find('.activate-box').addClass(IS_SHOWN);
+
+                if($(target).attr('id') == 'js-point-section' && !pointSliderInitialized) {
+                    startPointSlider();
+                }
             }
         }); 
     });
@@ -44,5 +52,57 @@ export default function scrollActivate() {
             $el.find('.activate-text').addClass(IS_SHOWN);
             $el.find('.activate-box').addClass(IS_SHOWN);
         }, 100);
+    }
+
+    function startPointSlider() {
+        pointSliderInitialized = true;
+
+        $('#js-point-slider').slick({
+            arrows: false,
+            dots: false,
+            fade: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            pauseOnHover: false,
+            infinite: true,
+            speed: 1500,
+            cssEase: 'ease-out',
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        centerMode: false,
+                    }
+                }
+            ]
+        });
+
+        function setPointTitle(index) {
+            let $pointJaTitle = $('#js-point-title-ja');
+
+            switch(index) {
+                case 1:
+                    $pointJaTitle.text('理想を叶える、自由設計');
+                    break;
+                case 2:
+                    $pointJaTitle.text('災害に備えた、耐震設計');
+                    break;
+                case 3:
+                    $pointJaTitle.text('良心的な、価格設定');
+                    break;
+                default:
+                    $pointJaTitle.text('好きな場所で、家を建てる');
+                    break;
+            }
+
+            $pointJaTitle.fadeIn(1000);
+        }
+
+        $('#js-point-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            $('#js-point-title-ja').empty();
+            $('#js-point-title-ja').hide();
+
+            setPointTitle(nextSlide);
+        });
     }
 }

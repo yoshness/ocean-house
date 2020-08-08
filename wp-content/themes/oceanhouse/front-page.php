@@ -40,7 +40,7 @@ get_header();
 			<h1 class="hero__title" id="js-hero-title">
 				<p class="blur-text js-separate-letters">オーシャンハウス。</p><p class="blur-text js-separate-letters">自分らしさの大海原へ</p></h1>
 			<div class="hero__tagline" id="js-hero-tagline">
-				<p>LIVE WITH THE SEA</p><p>海と住む</p>
+				<p id="js-hero-tagline-en">LIVE WITH THE SEA</p><p id="js-hero-tagline-ja">海と住む</p>
 			</div>
 			<div class="hero__progress js-slider-progress">
 				<span></span>
@@ -69,14 +69,17 @@ get_header();
 			</div>
 		</div>
 	</section>
-	<section class="l-index__point u-flex js-scroll-activate">
-		<div class="l-index__point-image">
-			<img class="blur-image" src="<?php echo IMAGE_URL; ?>index/point.jpg">
+	<section class="l-index__point u-flex js-scroll-activate" id="js-point-section">
+		<div class="l-index__point-image blur-image" id="js-point-slider">
+			<img src="<?php echo IMAGE_URL; ?>index/point-1.jpg">
+			<img src="<?php echo IMAGE_URL; ?>index/point-2.jpg">
+			<img src="<?php echo IMAGE_URL; ?>index/point-3.jpg">
+			<img src="<?php echo IMAGE_URL; ?>index/point-4.jpg">
 		</div>
 		<div class="l-index__point-content">
 			<h2 class="section-title">
 				<span class="section-title__en blur-text js-separate-letters">POINT</span>
-				<span class="section-title__ja blur-text js-separate-letters">好きな場所で、家を建てる</span>
+				<span class="section-title__ja blur-text js-separate-letters" id="js-point-title-ja">好きな場所で、家を建てる</span>
 			</h2>
 			<div class="activate-text">
 				<p>
@@ -107,14 +110,14 @@ get_header();
 			</li>
 			<li class="l-index__works-item">
 				<div style="background-image: url(<?php echo IMAGE_URL; ?>index/works-2.jpg);">
-					<h3>海辺の住宅 2</h3>
-					<p>365日、アウトドアを楽しむ 2</p>
+					<h3>首都圏に別荘を</h3>
+					<p>家族と自然に囲まれる非日常</p>
 				</div>
 			</li>
 			<li class="l-index__works-item">
 				<div style="background-image: url(<?php echo IMAGE_URL; ?>index/works-3.jpg);">
-					<h3>海辺の住宅 3</h3>
-					<p>365日、アウトドアを楽しむ 3</p>
+					<h3>地下付き三階建て</h3>
+					<p>理想を叶える、贅沢な空間</p>
 				</div>
 			</li>
 		</ul>

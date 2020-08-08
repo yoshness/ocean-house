@@ -8,7 +8,7 @@ body {
   font-smoothing: antialiased;
   text-rendering: auto;
   font-size: 14px;
-  font-family: "Noto Serif JP", serif;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   color: #151515;
   background: #fff;
 }
@@ -404,7 +404,7 @@ textarea {
 }
 
 .hero__title {
-  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-family: "Noto Serif JP", serif;
   font-size: 49px;
   position: absolute;
   top: 50%;
@@ -416,7 +416,6 @@ textarea {
 }
 
 .hero__tagline {
-  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   font-size: 12px;
   position: absolute;
   bottom: 40px;
@@ -493,7 +492,7 @@ textarea {
 }
 
 .logo__scroll {
-  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-family: "Noto Serif JP", serif;
   position: absolute;
   bottom: 150px;
   left: 45%;
@@ -528,7 +527,7 @@ textarea {
 }
 
 .section-title {
-  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-family: "Noto Serif JP", serif;
   position: relative;
   z-index: 1;
 }
@@ -1123,7 +1122,7 @@ textarea {
 }
 
 .prefooter {
-  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-family: "Noto Serif JP", serif;
   padding: 90px 170px;
   text-align: center;
   letter-spacing: .1em;
@@ -1187,7 +1186,7 @@ textarea {
 }
 
 .footer__text {
-  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-family: "Noto Serif JP", serif;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: .1em;
@@ -1318,7 +1317,7 @@ textarea {
 }
 
 .l-index__works-item div {
-  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-family: "Noto Serif JP", serif;
   height: 540px;
   margin: 0 15px;
   padding: 45px 50px;
@@ -1364,7 +1363,7 @@ textarea {
 }
 
 .l-index__people-overlay {
-  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-family: "Noto Serif JP", serif;
   position: absolute;
   top: 0;
   left: -100%;
@@ -1403,7 +1402,7 @@ textarea {
 }
 
 .l-index__reasons-item {
-  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-family: "Noto Serif JP", serif;
   position: relative;
   width: 48%;
   margin-bottom: 45px;
