@@ -3,10 +3,6 @@
 
     .logo {
         height: 625px;
-
-        @include max-screen($breakpoint-mobile) {
-            display: none;
-        }
     }
 }
 

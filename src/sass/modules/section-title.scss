@@ -10,6 +10,10 @@
     display: block;
 
     letter-spacing: .1em;
+
+    @include max-screen($breakpoint-mobile) {
+        font-size: 10px;
+    }
 }
 .section-title__ja {
     font-size: 25px;
@@ -19,6 +23,6 @@
     letter-spacing: .1em;
 
     @include max-screen($breakpoint-mobile) {
-        font-size: 22px;
+        font-size: 20px;
     }
 }

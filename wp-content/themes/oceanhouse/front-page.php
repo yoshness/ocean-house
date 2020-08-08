@@ -99,7 +99,7 @@ get_header();
 			<span class="section-title__ja blur-text js-separate-letters">好きな場所に、オーダーメイド住宅を</span>
 		</h2>
 		<p class="l-index__works-description activate-text">
-			オーシャンハウスでは、建てられる物件の数に限りがあります。<br>土地探しから、理想の住居設計、建築までを完全サポート。<br>マイホームは人生を変える大きなお買い物。<br>明るい未来を過ごしてもらいたいからこそ、一人ひとりのお客様と真摯に向き合います。
+			オーシャンハウスでは、<br class="u-show-sp">建てられる物件の数に限りがあります。<br>土地探しから、理想の住居設計、<br class="u-show-sp">建築までを完全サポート。<br>マイホームは人生を変える大きなお買い物。<br>明るい未来を過ごしてもらいたいからこそ、<br class="u-show-sp">一人ひとりのお客様と真摯に向き合います。
 		</p>
 		<ul class="l-index__works-list blur-image" id="js-works-slider">
 			<li class="l-index__works-item">
@@ -127,7 +127,7 @@ get_header();
 			<h2 class="section-title">
 				<span class="section-title__ja blur-text js-separate-letters">理想を叶える、スペシャリスト</span>
 			</h2>
-			<ul class="l-index__people-list blur-image u-flex">
+			<ul class="l-index__people-list blur-image u-flex" id="js-people-slider">
 				<li class="l-index__people-item">
 					<img src="<?php echo IMAGE_URL; ?>index/people-1.jpg" alt="">
 					<div class="l-index__people-overlay">

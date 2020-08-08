@@ -8,12 +8,23 @@
 
     color: #fff;
     background-color: #171a1d;
+
+    @include max-screen($breakpoint-mobile) {
+        padding: 60px 30px;
+    }
 }
 
 .prefooter__title {
     font-size: 25px;
 
     margin-bottom: 80px;
+
+    @include max-screen($breakpoint-mobile) {
+        font-size: 18px;
+        line-height: 1.8;
+
+        margin-bottom: 60px;
+    }
 }
 
 .prefooter__cta {
@@ -23,18 +34,46 @@
 .prefooter__cta-contact,
 .prefooter__cta-call {
     width: 40%;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+    }
+}
+
+.prefooter__cta-contact {
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 50px;
+
+        order: 2;
+    }
+}
+
+.prefooter__cta-call {
+    @include max-screen($breakpoint-mobile) {
+        order: 1;
+    }
 }
 
 .prefooter__cta-ja {
     font-size: 21px;
 
     margin-bottom: 5px;
+
+    @include max-screen($breakpoint-mobile) {
+        font-size: 15px;
+    }
 }
 
 .prefooter__cta-en {
     margin-bottom: 40px;
 
     text-transform: uppercase;
+
+    @include max-screen($breakpoint-mobile) {
+        font-size: 8px;
+
+        margin-bottom: 20px;
+    }
 }
 
 .prefooter__cta-link {
@@ -53,6 +92,13 @@
     background-image: linear-gradient(to left, transparent 0, #171a1d 100%);
     background-position: 99% 0;
     background-size: 200% 100%;
+
+    @include max-screen($breakpoint-mobile) {
+        font-size: 8px;
+
+        width: 85%;
+        margin: 0 auto;
+    }
 
     &:hover {
         color: #000;

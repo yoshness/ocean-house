@@ -1,5 +1,5 @@
 <div class="prefooter">
-	<h2 class="prefooter__title">東京、神奈川、埼玉、千葉で対応可能。<br>あなたの理想の暮らしを、お聞かせください。</h2>
+	<h2 class="prefooter__title">東京、神奈川、埼玉、<br class="u-show-sp">千葉で対応可能。<br>あなたの理想の暮らしを、<br class="u-show-sp">お聞かせください。</h2>
 	<div class="prefooter__cta u-flex">
 		<div class="prefooter__cta-contact">
 			<h3 class="prefooter__cta-ja">メールでのお問い合わせ</h3>

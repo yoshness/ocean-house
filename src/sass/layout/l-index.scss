@@ -1,21 +1,47 @@
 .l-index__concept,
 .l-index__point {
     padding-top: 150px;
+
+    @include max-screen($breakpoint-mobile) {
+        padding-top: 80px;
+    }
 }
 
 .l-index__concept-image,
 .l-index__point-image {
     width: 45%;
 
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+    }
+
     img {
         width: 100%;
         height: auto;
+
+        @include max-screen($breakpoint-mobile) {
+            height: 295px;
+
+            object-fit: cover;
+        }
+    }
+}
+
+.l-index__concept-image {
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 55px;
+
+        order: 2;
     }
 }
 
 .l-index__concept-content,
 .l-index__point-content {
     width: 45%;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+    }
 
     p {
         line-height: 2.5;
@@ -24,20 +50,38 @@
     }
 }
 
+.l-index__concept-content {
+    @include max-screen($breakpoint-mobile) {
+        padding: 0 25px;
+
+        order: 1;
+    }
+}
+
 .l-index__point-image {
     order: 2;
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 55px;
+    }
 }
 
 .l-index__point-content {
     padding-left: 12%;
 
     order: 1;
+    @include max-screen($breakpoint-mobile) {
+        padding: 0 25px;
+    }
 }
 
 .l-index__works {
     padding: 150px 0;
 
     text-align: center;
+
+    @include max-screen($breakpoint-mobile) {
+        padding: 70px 25px;
+    }
 
     h2 {
         margin-bottom: 40px;
@@ -48,6 +92,10 @@
     line-height: 2.5;
 
     margin-bottom: 60px;
+
+    @include max-screen($breakpoint-mobile) {
+        margin-bottom: 45px;
+    }
 }
 
 .l-index__works-item {
@@ -66,10 +114,25 @@
         background-position: center center;
         background-size: cover;
 
+        @include max-screen($breakpoint-mobile) {
+            height: 235px;
+            margin: 0;
+            padding: 15px;
+        }
+
         h3 {
             font-size: 25px;
 
             margin-bottom: 5px;
+
+            @include max-screen($breakpoint-mobile) {
+                font-size: 13px;
+            }
+        }
+        p {
+            @include max-screen($breakpoint-mobile) {
+                font-size: 10px;
+            }
         }
     }
 }
@@ -90,6 +153,10 @@
     overflow: hidden;
 
     width: 31%;
+
+    @include max-screen($breakpoint-mobile) {
+        padding: 0 10px;
+    }
 
     &:hover {
         img {
@@ -126,13 +193,31 @@
     color: #fff;
     background-color: rgba(0,0,0,.5);
 
+    @include max-screen($breakpoint-mobile) {
+        padding: 30px 20px;
+    }
+
     h3 {
         font-size: 25px;
 
         text-transform: uppercase;
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 18px;
+        }
     }
     span {
         display: block;
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 10px;
+        }
+    }
+}
+
+.l-index__people-position {
+    @include max-screen($breakpoint-mobile) {
+        font-size: 10px;
     }
 }
 
@@ -141,12 +226,25 @@
     bottom: 50px;
 
     width: 78%;
+
+    @include max-screen($breakpoint-mobile) {
+        font-size: 10px;
+
+        position: relative;
+        bottom: -35px;
+
+        width: 100%;
+    }
 }
 
 .l-index__reasons {
     padding-bottom: 150px;
 
     text-align: center;
+
+    @include max-screen($breakpoint-mobile) {
+        padding-bottom: 130px;
+    }
 
     h2 {
         margin-bottom: 80px;
@@ -165,6 +263,11 @@
 
     color: #fff;
 
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
     div {
         position: relative;
 
@@ -174,6 +277,10 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+
+        @include max-screen($breakpoint-mobile) {
+            height: 240px;
+        }
 
         &:after {
             position: absolute;
@@ -201,6 +308,10 @@
         margin-bottom: 5px;
 
         transform: translateY(-50%);
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 18px;
+        }
     }
     p {
         position: absolute;
@@ -209,9 +320,17 @@
         width: 100%;
 
         transform: translateY(-50%);
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 10px;
+        }
     }
 }
 
 .l-index__prefooter {
     padding-bottom: 150px;
+
+    @include max-screen($breakpoint-mobile) {
+        padding-bottom: 125px;
+    }
 }

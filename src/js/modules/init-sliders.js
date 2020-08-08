@@ -97,4 +97,24 @@ export default function initSliders() {
 	    	}
 	    ]
 	});
+
+	$('#js-people-slider').slick({
+		mobileFirst: true,
+		arrows: false,
+		dots: false,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		pauseOnHover: false,
+		infinite: true,
+		speed: 1500,
+		cssEase: 'ease-out',
+    	centerMode: true,
+  		centerPadding: '20%',
+  		responsive: [
+	    	{
+	            breakpoint: 767,
+	            settings: 'unslick'
+	    	}
+	    ]
+	});
 }

@@ -10,6 +10,9 @@
     background-color: #fff;
 
     align-self: baseline;
+    @include max-screen($breakpoint-mobile) {
+        display: none;
+    }
 
     // only for home page
     .l-index & {

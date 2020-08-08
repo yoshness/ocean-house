@@ -390,6 +390,13 @@ textarea {
   filter: blur(10px) saturate(0.1);
 }
 
+@media screen and (max-width: 767px) {
+  .hero {
+    width: 100%;
+    height: 590px;
+  }
+}
+
 .hero.is-shown {
   opacity: 1;
   filter: none;
@@ -401,6 +408,12 @@ textarea {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .hero__slider-item div {
+    height: 590px;
+  }
 }
 
 .hero__title {
@@ -415,6 +428,13 @@ textarea {
   color: #fff;
 }
 
+@media screen and (max-width: 767px) {
+  .hero__title {
+    font-size: 27px;
+    width: 100%;
+  }
+}
+
 .hero__tagline {
   font-size: 12px;
   position: absolute;
@@ -425,6 +445,12 @@ textarea {
   color: #fff;
 }
 
+@media screen and (max-width: 767px) {
+  .hero__tagline {
+    left: 30px;
+  }
+}
+
 .hero__tagline.is-shown {
   opacity: 1;
 }
@@ -433,8 +459,21 @@ textarea {
   display: inline-block;
 }
 
+@media screen and (max-width: 767px) {
+  .hero__tagline p {
+    display: block;
+  }
+}
+
 .hero__tagline p:last-child {
   margin-left: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .hero__tagline p:last-child {
+    margin-top: 5px;
+    margin-left: 0;
+  }
 }
 
 .hero__progress {
@@ -476,6 +515,12 @@ textarea {
   background-color: #fff;
   -ms-flex-item-align: baseline;
       align-self: baseline;
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    display: none;
+  }
 }
 
 .l-index .logo {
@@ -538,6 +583,12 @@ textarea {
   letter-spacing: .1em;
 }
 
+@media screen and (max-width: 767px) {
+  .section-title__en {
+    font-size: 10px;
+  }
+}
+
 .section-title__ja {
   font-size: 25px;
   display: block;
@@ -546,7 +597,7 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .section-title__ja {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -557,12 +608,6 @@ textarea {
 
 .banner .logo {
   height: 625px;
-}
-
-@media screen and (max-width: 767px) {
-  .banner .logo {
-    display: none;
-  }
 }
 
 .banner__img {
@@ -1130,9 +1175,23 @@ textarea {
   background-color: #171a1d;
 }
 
+@media screen and (max-width: 767px) {
+  .prefooter {
+    padding: 60px 30px;
+  }
+}
+
 .prefooter__title {
   font-size: 25px;
   margin-bottom: 80px;
+}
+
+@media screen and (max-width: 767px) {
+  .prefooter__title {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 60px;
+  }
 }
 
 .prefooter__cta {
@@ -1144,14 +1203,49 @@ textarea {
   width: 40%;
 }
 
+@media screen and (max-width: 767px) {
+  .prefooter__cta-contact,
+  .prefooter__cta-call {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .prefooter__cta-contact {
+    margin-top: 50px;
+    -ms-flex-order: 2;
+        order: 2;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .prefooter__cta-call {
+    -ms-flex-order: 1;
+        order: 1;
+  }
+}
+
 .prefooter__cta-ja {
   font-size: 21px;
   margin-bottom: 5px;
 }
 
+@media screen and (max-width: 767px) {
+  .prefooter__cta-ja {
+    font-size: 15px;
+  }
+}
+
 .prefooter__cta-en {
   margin-bottom: 40px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .prefooter__cta-en {
+    font-size: 8px;
+    margin-bottom: 20px;
+  }
 }
 
 .prefooter__cta-link {
@@ -1166,6 +1260,14 @@ textarea {
   background-image: linear-gradient(to left, transparent 0, #171a1d 100%);
   background-position: 99% 0;
   background-size: 200% 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .prefooter__cta-link {
+    font-size: 8px;
+    width: 85%;
+    margin: 0 auto;
+  }
 }
 
 .prefooter__cta-link:hover {
@@ -1261,6 +1363,7 @@ textarea {
 @media screen and (max-width: 767px) {
   .l-container {
     width: 100%;
+    padding: 0 25px;
   }
 }
 
@@ -1269,9 +1372,23 @@ textarea {
   padding-top: 150px;
 }
 
+@media screen and (max-width: 767px) {
+  .l-index__concept,
+  .l-index__point {
+    padding-top: 80px;
+  }
+}
+
 .l-index__concept-image,
 .l-index__point-image {
   width: 45%;
+}
+
+@media screen and (max-width: 767px) {
+  .l-index__concept-image,
+  .l-index__point-image {
+    width: 100%;
+  }
 }
 
 .l-index__concept-image img,
@@ -1280,9 +1397,32 @@ textarea {
   height: auto;
 }
 
+@media screen and (max-width: 767px) {
+  .l-index__concept-image img,
+  .l-index__point-image img {
+    height: 295px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .l-index__concept-image {
+    margin-top: 55px;
+    -ms-flex-order: 2;
+        order: 2;
+  }
+}
+
 .l-index__concept-content,
 .l-index__point-content {
   width: 45%;
+}
+
+@media screen and (max-width: 767px) {
+  .l-index__concept-content,
+  .l-index__point-content {
+    width: 100%;
+  }
 }
 
 .l-index__concept-content p,
@@ -1291,9 +1431,23 @@ textarea {
   margin-top: 25px;
 }
 
+@media screen and (max-width: 767px) {
+  .l-index__concept-content {
+    padding: 0 25px;
+    -ms-flex-order: 1;
+        order: 1;
+  }
+}
+
 .l-index__point-image {
   -ms-flex-order: 2;
       order: 2;
+}
+
+@media screen and (max-width: 767px) {
+  .l-index__point-image {
+    margin-top: 55px;
+  }
 }
 
 .l-index__point-content {
@@ -1302,9 +1456,21 @@ textarea {
       order: 1;
 }
 
+@media screen and (max-width: 767px) {
+  .l-index__point-content {
+    padding: 0 25px;
+  }
+}
+
 .l-index__works {
   padding: 150px 0;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .l-index__works {
+    padding: 70px 25px;
+  }
 }
 
 .l-index__works h2 {
@@ -1314,6 +1480,12 @@ textarea {
 .l-index__works-description {
   line-height: 2.5;
   margin-bottom: 60px;
+}
+
+@media screen and (max-width: 767px) {
+  .l-index__works-description {
+    margin-bottom: 45px;
+  }
 }
 
 .l-index__works-item div {
@@ -1329,9 +1501,29 @@ textarea {
   background-size: cover;
 }
 
+@media screen and (max-width: 767px) {
+  .l-index__works-item div {
+    height: 235px;
+    margin: 0;
+    padding: 15px;
+  }
+}
+
 .l-index__works-item div h3 {
   font-size: 25px;
   margin-bottom: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .l-index__works-item div h3 {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .l-index__works-item div p {
+    font-size: 10px;
+  }
 }
 
 .l-index__people {
@@ -1347,6 +1539,12 @@ textarea {
   position: relative;
   overflow: hidden;
   width: 31%;
+}
+
+@media screen and (max-width: 767px) {
+  .l-index__people-item {
+    padding: 0 10px;
+  }
 }
 
 .l-index__people-item:hover img {
@@ -1377,13 +1575,37 @@ textarea {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+@media screen and (max-width: 767px) {
+  .l-index__people-overlay {
+    padding: 30px 20px;
+  }
+}
+
 .l-index__people-overlay h3 {
   font-size: 25px;
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 767px) {
+  .l-index__people-overlay h3 {
+    font-size: 18px;
+  }
+}
+
 .l-index__people-overlay span {
   display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .l-index__people-overlay span {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .l-index__people-position {
+    font-size: 10px;
+  }
 }
 
 .l-index__people-description {
@@ -1392,9 +1614,24 @@ textarea {
   width: 78%;
 }
 
+@media screen and (max-width: 767px) {
+  .l-index__people-description {
+    font-size: 10px;
+    position: relative;
+    bottom: -35px;
+    width: 100%;
+  }
+}
+
 .l-index__reasons {
   padding-bottom: 150px;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .l-index__reasons {
+    padding-bottom: 130px;
+  }
 }
 
 .l-index__reasons h2 {
@@ -1410,6 +1647,13 @@ textarea {
   color: #fff;
 }
 
+@media screen and (max-width: 767px) {
+  .l-index__reasons-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 .l-index__reasons-item div {
   position: relative;
   width: 100%;
@@ -1417,6 +1661,12 @@ textarea {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .l-index__reasons-item div {
+    height: 240px;
+  }
 }
 
 .l-index__reasons-item div:after {
@@ -1439,6 +1689,12 @@ textarea {
   transform: translateY(-50%);
 }
 
+@media screen and (max-width: 767px) {
+  .l-index__reasons-item h3 {
+    font-size: 18px;
+  }
+}
+
 .l-index__reasons-item p {
   position: absolute;
   top: 55%;
@@ -1446,8 +1702,20 @@ textarea {
   transform: translateY(-50%);
 }
 
+@media screen and (max-width: 767px) {
+  .l-index__reasons-item p {
+    font-size: 10px;
+  }
+}
+
 .l-index__prefooter {
   padding-bottom: 150px;
+}
+
+@media screen and (max-width: 767px) {
+  .l-index__prefooter {
+    padding-bottom: 125px;
+  }
 }
 
 .l-concept__intro {
