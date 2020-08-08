@@ -14140,6 +14140,24 @@ function initSliders() {
 			settings: 'unslick'
 		}]
 	});
+
+	$('#js-flow-slider').slick({
+		mobileFirst: true,
+		arrows: false,
+		dots: true,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		pauseOnHover: false,
+		infinite: true,
+		speed: 1000,
+		cssEase: 'ease-out',
+		centerMode: true,
+		centerPadding: '10%',
+		responsive: [{
+			breakpoint: 767,
+			settings: 'unslick'
+		}]
+	});
 }
 
 /***/ }),

@@ -47,6 +47,10 @@
         line-height: 2.5;
 
         margin-top: 25px;
+
+        @include max-screen($breakpoint-mobile) {
+            line-height: 2;
+        }
     }
 }
 
@@ -94,6 +98,8 @@
     margin-bottom: 60px;
 
     @include max-screen($breakpoint-mobile) {
+        line-height: 2;
+
         margin-bottom: 45px;
     }
 }

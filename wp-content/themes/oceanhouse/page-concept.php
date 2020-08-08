@@ -82,7 +82,7 @@ get_header();
 				だからこそ、オーシャンハウスが出がける物件は、<br>
 				高いデザイン性だけでなく、耐震強度・環境対応・高齢化社会への対応を考慮します。<br>
 			</p>
-			<ul class="l-concent__specs-list u-flex blur-image">
+			<ul class="l-concept__specs-list u-flex blur-image">
 				<li>
 					<div class="spec-block">
 						<img src="<?php echo IMAGE_URL; ?>concept/specs-1.jpg">
@@ -126,50 +126,50 @@ get_header();
 			<h2 class="section-title">
 				<span class="section-title__ja blur-text js-separate-letters">建築の流れ</span>
 			</h2>
-			<ul class="l-concept__flow-list u-flex js-scroll-activate">
-				<li>
+			<ul class="l-concept__flow-list u-flex js-scroll-activate" id="js-flow-slider">
+				<li class="l-concept__flow-item">
 					<div class="flow-block">
 						<span class="flow-block__step">STEP 1</span>
 						<img class="flow-block__icon" src="<?php echo IMAGE_URL; ?>concept/step-1.png">
 						<p class="flow-block__description">ご相談・問い合わせ</p>
 					</div>
 				</li>
-				<li>
+				<li class="l-concept__flow-item">
 					<div class="flow-block">
 						<span class="flow-block__step">STEP 2</span>
 						<img class="flow-block__icon" src="<?php echo IMAGE_URL; ?>concept/step-2.png">
 						<p class="flow-block__description">土地探し（お持ちでない方）</p>
 					</div>
 				</li>
-				<li>
+				<li class="l-concept__flow-item">
 					<div class="flow-block">
 						<span class="flow-block__step">STEP 3</span>
 						<img class="flow-block__icon" src="<?php echo IMAGE_URL; ?>concept/step-3.png">
 						<p class="flow-block__description">計画プラン・見積もり作成</p>
 					</div>
 				</li>
-				<li>
+				<li class="l-concept__flow-item">
 					<div class="flow-block">
 						<span class="flow-block__step">STEP 4</span>
 						<img class="flow-block__icon" src="<?php echo IMAGE_URL; ?>concept/step-4.png">
 						<p class="flow-block__description">設計・土地売買契約</p>
 					</div>
 				</li>
-				<li>
+				<li class="l-concept__flow-item">
 					<div class="flow-block">
 						<span class="flow-block__step">STEP 5</span>
 						<img class="flow-block__icon" src="<?php echo IMAGE_URL; ?>concept/step-5.png">
 						<p class="flow-block__description">工事請負契約</p>
 					</div>
 				</li>
-				<li>
+				<li class="l-concept__flow-item">
 					<div class="flow-block">
 						<span class="flow-block__step">STEP 6</span>
 						<img class="flow-block__icon" src="<?php echo IMAGE_URL; ?>concept/step-6.png">
 						<p class="flow-block__description">着工・各種検査</p>
 					</div>
 				</li>
-				<li>
+				<li class="l-concept__flow-item">
 					<div class="flow-block">
 						<span class="flow-block__step">STEP 7  竣工・引き渡し</span>
 						<img class="flow-block__icon" src="<?php echo IMAGE_URL; ?>concept/step-7.png">

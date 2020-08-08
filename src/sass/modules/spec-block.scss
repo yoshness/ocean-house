@@ -6,6 +6,9 @@
         height: 295px;
 
         object-fit: cover;
+        @include max-screen($breakpoint-mobile) {
+            height: 210px;
+        }
     }
     span {
         position: absolute;
@@ -20,5 +23,12 @@
         letter-spacing: .1em;
 
         background-color: #fff;
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 10px;
+
+            width: 120px;
+            padding: 8px 0;
+        }
     }
 }

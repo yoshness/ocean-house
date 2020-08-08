@@ -1,9 +1,13 @@
 .l-concept__flow-list {
     &.is-active {
-        li {
+        .l-concept__flow-item {
             &:first-child {
                 &:after {
                     right: -16px;
+
+                    @include max-screen($breakpoint-mobile) {
+                        right: 13px;
+                    }
                 }
             }
             &:nth-child(2) {
