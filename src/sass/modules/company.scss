@@ -2,8 +2,7 @@
     text-align: left;
     letter-spacing: .08em;
 
-    dt,
-    dd {
+    li {
         padding: 35px 0;
 
         border-top: 1px solid #f0f0f0;
@@ -11,26 +10,55 @@
         &:last-of-type {
             border-bottom: 1px solid #f0f0f0;
         }
-    }
-    dt {
-        width: 25%;
 
-        &.company__item--list {
-            padding-bottom: 105px;
+        &.u-flex {
+            align-items: initial;
+        }
+
+        p {
+            width: 75%;
+
+            @include max-screen($breakpoint-mobile) {
+                width: 60%;
+            }
         }
     }
-    dd {
-        width: 75%;
+}
 
-        &.company__item--list {
-            ul {
-                padding-left: 20px;
+.company__label {
+    width: 25%;
 
-                list-style-type: circle;
+    @include max-screen($breakpoint-mobile) {
+        width: 40%;
+    }
+}
 
-                li {
-                    margin-bottom: 10px;
-                }
+.company__sub {
+    width: 75%;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 60%;
+    }
+
+    ul {
+        padding-left: 20px;
+
+        list-style-type: circle;
+
+        @include max-screen($breakpoint-mobile) {
+            padding-left: 15px;
+        }
+
+        li {
+            padding: 0;
+            padding-bottom: 15px;
+
+            border-top: none;
+
+            &:last-of-type {
+                padding-bottom: 0;
+
+                border-bottom: none;
             }
         }
     }

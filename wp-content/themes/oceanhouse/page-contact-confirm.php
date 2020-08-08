@@ -24,7 +24,7 @@ get_header();
 			</h2>
 			<div class="activate-text">
 				<div class="l-contact__content-description">
-					入力内容をご確認の上、「送信する」ボタンを押してください。<br>修正がある場合は、「修正する」ボタンを押してください。
+					入力内容をご確認の上、<br class="u-show-sp">「送信する」ボタンを押してください。<br>修正がある場合は、「修正する」ボタンを押してください。
 				</div>
 				<div class="l-contact__content-form">
 					<div class="form">

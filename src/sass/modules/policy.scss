@@ -4,11 +4,15 @@
     text-align: left;
 
     ol {
+        list-style-position: inside;
         list-style-type: decimal;
 
         li {
             margin-bottom: 45px;
-            margin-left: 17px;
+
+            @include max-screen($breakpoint-mobile) {
+                margin-bottom: 30px;
+            }
         }
     }
 }

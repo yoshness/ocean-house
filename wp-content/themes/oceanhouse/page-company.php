@@ -23,26 +23,38 @@ get_header();
 				<span class="section-title__ja blur-text js-separate-letters">会社概要</span>
 			</h2>
 			<div class="activate-text">
-				<dl class="l-company__content-list company u-flex">
-					<dt>商号</dt>
-					<dd>株式会社OCEANHOUSE</dd>
-					<dt>設立</dt>
-					<dd>2020年7月1日</dd>
-					<dt>所在地</dt>
-					<dd>〒000-0000  東京都新宿区〇〇</dd>
-					<dt>代表者</dt>
-					<dd>代表取締役社長　鳥海 林太郎</dd>
-					<dt class="company__item--list">事業内容</dt>
-					<dd class="company__item--list">
-						<ul>
-							<li>建設業許可番号:国土交通大臣許可(般-29)第15997号</li>
-							<li>建築士事務所登録:東京都知事登録第53354号　他各県</li>
-							<li>宅地建物取引業:東京都知事(1)第99490号</li>
-						</ul>
-					</dd>
-					<dt>取引金融機関</dt>
-					<dd>三井住友銀行/みずほ銀行/三菱UFJ銀行</dd>
-				</dl>
+				<ul class="l-company__content-list company">
+					<li class="u-flex">
+						<label class="company__label">商号</label>
+						<p>株式会社OCEANHOUSE</p>
+					</li>
+					<li class="u-flex">
+						<label class="company__label">設立</label>
+						<p>2020年7月1日</p>
+					</li>
+					<li class="u-flex">
+						<label class="company__label">所在地</label>
+						<p>〒000-0000  <br class="u-show-sp">東京都新宿区〇〇</p>
+					</li>
+					<li class="u-flex">
+						<label class="company__label">代表者</label>
+						<p>代表取締役社長　<br class="u-show-sp">鳥海 林太郎</p>
+					</li>
+					<li class="u-flex">
+						<label class="company__label">事業内容</label>
+						<div class="company__sub">
+							<ul>
+								<li>建設業許可番号:<br class="u-show-sp">国土交通大臣許可(般-29)<br class="u-show-sp">第15997号</li>
+								<li>建築士事務所登録:<br class="u-show-sp">東京都知事登録<br class="u-show-sp">第53354号　他各県</li>
+								<li>宅地建物取引業:<br class="u-show-sp">東京都知事(1)<br class="u-show-sp">第99490号</li>
+							</ul>
+						</div class="company__sub">
+					</li>
+					<li class="u-flex">
+						<label class="company__label">取引金融機関</label>
+						<p>三井住友銀行<br class="u-show-sp">/みずほ銀行/<br class="u-show-sp">三菱UFJ銀行</p>
+					</li>
+				</ul>
 				<a class="l-company__content-link link-arrow" href="<?php echo HOME_URL; ?>">トップへ戻る</a>
 			</div>
 		</div>

@@ -24,7 +24,7 @@ get_header();
 			</h2>
 			<div class="activate-text">
 				<div class="l-contact__content-description">
-					お問い合わせいただき、誠にありがとうございます。<br>1週間以内に弊社よりご指定の住所へお送りいたしますので、<br>
+					お問い合わせいただき、<br class="u-show-sp">誠にありがとうございます。<br>1週間以内に弊社より<br class="u-show-sp">ご指定の住所へお送りいたしますので、<br>
 					今しばらくお待ちくださいませ。
 				</div>
 				<div class="l-contact__content-form">

@@ -11,6 +11,11 @@
             position: absolute;
             bottom: 25px;
             left: 28%;
+
+            @include max-screen($breakpoint-mobile) {
+                bottom: 8px;
+                left: 0;
+            }
         }
     }
 
@@ -18,11 +23,23 @@
     .mw_wp_form_confirm {
         .form__item {
             justify-content: initial;
+            @include max-screen($breakpoint-mobile) {
+                word-break: break-all;
+            }
 
             label {
                 top: 0;
 
                 margin-right: 80px;
+
+                @include max-screen($breakpoint-mobile) {
+                    width: 36%;
+                    margin-right: 20px;
+                }
+
+                &:after {
+                    display: none;
+                }
             }
         }
         .form__privacy,
@@ -40,6 +57,9 @@
     border-bottom: 1px solid #ececec;
 
     align-items: initial;
+    @include max-screen($breakpoint-mobile) {
+        padding: 25px 0 35px;
+    }
 
     &:first-child {
         border-top: 1px solid #ececec;
@@ -62,6 +82,16 @@
 
                 color: #fff;
                 background-color: #000;
+
+                @include max-screen($breakpoint-mobile) {
+                    font-size: 10px;
+
+                    position: relative;
+                    top: -1px;
+                    right: -20px;
+
+                    padding: 3px 15px;
+                }
             }
         }
     }
@@ -71,6 +101,12 @@
         top: 15px;
 
         width: 20%;
+
+        @include max-screen($breakpoint-mobile) {
+            top: 0;
+
+            width: 100%;
+        }
     }
     input,
     textarea {
@@ -78,6 +114,12 @@
         padding: 20px 30px;
 
         background-color: #f0f4f7;
+
+        @include max-screen($breakpoint-mobile) {
+            width: 100%;
+            margin-top: 15px;
+            padding: 15px 20px;
+        }
 
         &::placeholder {
             color: #d0d3d6;
@@ -93,6 +135,12 @@
 
     text-align: center;
     letter-spacing: .05em;
+
+    @include max-screen($breakpoint-mobile) {
+        line-height: 2.5;
+
+        margin-top: 40px;
+    }
 
     a {
         position: relative;
@@ -112,6 +160,10 @@
             content: '';
 
             background-color: #000;
+
+            @include max-screen($breakpoint-mobile) {
+                bottom: -1px;
+            }
         }
 
         &:hover {
@@ -129,8 +181,8 @@
         display: none;
         &:checked + label:after {
             position: absolute;
-            top: 4px;
-            left: 9px;
+            top: 3px;
+            left: 8px;
 
             display: block;
 
@@ -184,6 +236,11 @@
     background-image: linear-gradient(to left, transparent 0, #fff 100%);
     background-position: 99% 0;
     background-size: 200% 100%;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+        margin-top: 50px;
+    }
 
     &:before {
         position: absolute;

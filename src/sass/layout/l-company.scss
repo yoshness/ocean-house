@@ -1,11 +1,23 @@
 .l-company__content {
     text-align: center;
 
+    @include max-screen($breakpoint-mobile) {
+        padding-top: 70px;
+    }
+
     h2 {
         margin-bottom: 80px;
+
+        @include max-screen($breakpoint-mobile) {
+            margin-bottom: 60px;
+        }
     }
 }
 
 .l-company__content-link {
     margin: 80px 0 150px;
+
+    @include max-screen($breakpoint-mobile) {
+        margin-bottom: 80px;
+    }
 }

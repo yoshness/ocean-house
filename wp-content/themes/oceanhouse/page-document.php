@@ -24,7 +24,7 @@ get_header();
 			</h2>
 			<div class="activate-text">
 				<div class="l-contact__content-description">
-					オーシャンハウスは東京、神奈川、埼玉、千葉で対応可能です。<br>資料をご確認の上、是非ご検討ください。
+					オーシャンハウスは東京、<br class="u-show-sp">神奈川、埼玉、千葉で対応可能です。<br>資料をご確認の上、是非ご検討ください。
 				</div>
 				<div class="l-contact__content-form">
 					<div class="form">
