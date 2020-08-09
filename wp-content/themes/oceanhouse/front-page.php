@@ -66,6 +66,7 @@ get_header();
 				<p>
 					だからこそ、本当に好きな場所に住もう。<br>何ひとつ妥協のない、こだわり抜いた家で暮らそう。<br>オンもオフも充実する、至高の居住性。土地選び、間取り、デザイン、設備<br>全てがオーダーメイド。でも手が届く価格帯。
 				</p>
+				<a class="l-index__concept-arrow" href="<?php echo HOME_URL; ?>concept"></a>
 			</div>
 		</div>
 	</section>

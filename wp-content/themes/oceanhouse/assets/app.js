@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -13975,11 +13975,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_init_sliders__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_hero_animation__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_separate_letters__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_separate_letters__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_scroll_activate__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modules_toggle_menu__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__modules_scroll_to_element__ = __webpack_require__(8);
 
 window.jQuery = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
 window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
+
+
 
 
 
@@ -13990,6 +13994,8 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__modules_init_sliders__["a" /*
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__modules_hero_animation__["a" /* default */])();
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__modules_separate_letters__["a" /* default */])();
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__modules_scroll_activate__["a" /* default */])();
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__modules_toggle_menu__["a" /* default */])();
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__modules_scroll_to_element__["a" /* default */])();
 
 /***/ }),
 /* 3 */,
@@ -14279,6 +14285,39 @@ function scrollActivate() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = scrollToElement;
+function scrollToElement() {
+    var $trigger = $('.js-scroll');
+
+    $trigger.on('click', function (e) {
+        // only smooth scroll if in home page, otherwise act as a normal anchor
+        if (window.location.pathname == '/') {
+            e.preventDefault();
+
+            // if menu item is clicked, close menu first
+            if ($(e.currentTarget).closest('li').hasClass('menu__item')) {
+                $('#js-toggle-menu').click();
+            }
+
+            var $target = $($(e.currentTarget).attr('href').replace('/', '')),
+                offset = 0;
+
+            if ($(e.currentTarget).data('offset') != undefined) {
+                offset = $(e.currentTarget).data('offset');
+            }
+
+            if ($target != '') {
+                $('html, body').stop().animate({ scrollTop: $target.offset().top + offset }, 1000);
+            }
+        }
+    });
+}
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = separateLetters;
 function separateLetters() {
 	$('.js-separate-letters').each(function (index, val) {
@@ -14303,8 +14342,31 @@ function separateLetters() {
 }
 
 /***/ }),
-/* 9 */,
 /* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = toggleMenu;
+function toggleMenu() {
+	var $el = $('#js-toggle-menu'),
+	    $header = $('#js-header'),
+	    $menu = $('#js-menu'),
+	    IS_OPEN = 'is-open',
+	    IS_SHOWN = 'is-shown',
+	    IS_LOCKED = 'is-locked';
+
+	$el.on('click', function () {
+		$('html, body').toggleClass(IS_LOCKED);
+
+		$header.toggleClass(IS_OPEN);
+		$el.toggleClass(IS_OPEN);
+		$menu.toggleClass(IS_SHOWN);
+	});
+}
+
+/***/ }),
+/* 11 */,
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(2);

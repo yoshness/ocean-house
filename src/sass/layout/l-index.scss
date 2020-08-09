@@ -55,10 +55,66 @@
 }
 
 .l-index__concept-content {
+    position: relative;
+
     @include max-screen($breakpoint-mobile) {
         padding: 0 25px;
 
         order: 1;
+    }
+}
+
+.l-index__concept-arrow {
+    position: relative;
+
+    display: inline-block;
+
+    width: 120px;
+    height: 20px;
+    margin-top: 70px;
+
+    &:before {
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+
+        display: block;
+
+        width: 100px;
+        height: 2px;
+
+        content: '';
+
+        background-color: $base-font-color;
+    }
+    &:after {
+        position: absolute;
+        bottom: 5px;
+        left: 88px;
+
+        display: block;
+
+        width: 10px;
+        height: 10px;
+
+        content: '';
+        transform: rotate(45deg);
+
+        border-top: 2px solid $base-font-color;
+    }
+
+    &:before,
+    &:after {
+        transition: left $duration $easing;
+    }
+
+    &:hover {
+        &:before {
+            left: 15px;
+        }
+        &:after {
+            left: 104px;
+        }
     }
 }
 
