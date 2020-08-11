@@ -9,7 +9,7 @@ export default function heroAnimation() {
 	        $heroWrapper.addClass(IS_SHOWN).delay(0).queue((next) => {
 	            $('#js-hero-title').find('.blur-text').addClass(IS_SHOWN).delay(700).queue((next) => {
 	                $heroTagline.addClass(IS_SHOWN).delay(1000).queue((next) => {
-	                	$('.js-slider-progress').addClass(IS_SHOWN);
+	                	$('.js-hero-progress').addClass(IS_SHOWN);
 	                });
 	            });
 	        });

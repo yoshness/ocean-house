@@ -22,7 +22,7 @@ function contact_validation_rules( $Validation, $data, $Data ) {
 
     return $Validation;
 }
-add_filter( 'mwform_validation_mw-wp-form-20', 'contact_validation_rules', 10, 3 );
+add_filter( 'mwform_validation_mw-wp-form-25', 'contact_validation_rules', 10, 3 );
 
 function document_validation_rules( $Validation, $data, $Data ) {
     $Validation->set_rule('fullname', 'noEmpty',  array('message' => '名前は必須です'));
@@ -35,4 +35,4 @@ function document_validation_rules( $Validation, $data, $Data ) {
 
     return $Validation;
 }
-add_filter( 'mwform_validation_mw-wp-form-25', 'document_validation_rules', 10, 3 );
+add_filter( 'mwform_validation_mw-wp-form-27', 'document_validation_rules', 10, 3 );

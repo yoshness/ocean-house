@@ -4,12 +4,12 @@
 		<div class="prefooter__cta-contact">
 			<h3 class="prefooter__cta-ja">メールでのお問い合わせ</h3>
 			<p class="prefooter__cta-en">Contact Us</p>
-			<a class="prefooter__cta-link" href="#">MORE</a>
+			<a class="prefooter__cta-link" href="<?php echo HOME_URL; ?>contact-form">MORE</a>
 		</div>
 		<div class="prefooter__cta-call">
 			<h3 class="prefooter__cta-ja">お電話でのお問い合わせ</h3>
 			<p class="prefooter__cta-en">CALL</p>
-			<a class="prefooter__cta-link" href="#">03-1111-1111</a>
+			<a class="prefooter__cta-link" href="tel:+0311111111">03-1111-1111</a>
 		</div>
 	</div>
 </div>

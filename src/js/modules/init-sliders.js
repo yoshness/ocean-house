@@ -6,7 +6,7 @@ export default function initSliders() {
 	let $heroJaTagline = $('#js-hero-tagline-ja');
 
 	let time = 2;
-  	let $bar = $('.js-slider-progress span'),
+  	let $bar = $('.js-hero-progress span'),
     isPause,
     tick,
     percentTime;

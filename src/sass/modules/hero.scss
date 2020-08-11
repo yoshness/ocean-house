@@ -40,6 +40,7 @@
 .hero__title {
     font-family: $font-noto;
     font-size: 49px;
+    font-weight: normal;
 
     position: absolute;
     top: 50%;
@@ -106,7 +107,6 @@
 
     transition: opacity $duration $easing;
 
-    opacity: .4;
     opacity: 0;
     background-color: #afbabf;
 

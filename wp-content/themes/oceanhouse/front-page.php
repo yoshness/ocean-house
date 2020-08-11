@@ -42,7 +42,7 @@ get_header();
 			<div class="hero__tagline" id="js-hero-tagline">
 				<p id="js-hero-tagline-en">LIVE WITH THE SEA</p><p id="js-hero-tagline-ja">海と住む</p>
 			</div>
-			<div class="hero__progress js-slider-progress">
+			<div class="hero__progress js-hero-progress">
 				<span></span>
 			</div>
 		</div>
@@ -71,11 +71,18 @@ get_header();
 		</div>
 	</section>
 	<section class="l-index__point u-flex js-scroll-activate" id="js-point-section">
-		<div class="l-index__point-image blur-image" id="js-point-slider">
-			<img src="<?php echo IMAGE_URL; ?>index/point-1.jpg">
-			<img src="<?php echo IMAGE_URL; ?>index/point-2.jpg">
-			<img src="<?php echo IMAGE_URL; ?>index/point-3.jpg">
-			<img src="<?php echo IMAGE_URL; ?>index/point-4.jpg">
+		<div class="l-index__point-image blur-image">
+			<div id="js-point-slider">
+				<img src="<?php echo IMAGE_URL; ?>index/point-1.jpg">
+				<img src="<?php echo IMAGE_URL; ?>index/point-2.jpg">
+				<img src="<?php echo IMAGE_URL; ?>index/point-3.jpg">
+				<img src="<?php echo IMAGE_URL; ?>index/point-4.jpg">
+			</div>
+			<div class="l-index__point-progress js-point-progress">
+				<span id="js-point-current">1</span>
+				<div class="l-index__point-loader"></div>
+				<span>4</span>
+			</div>
 		</div>
 		<div class="l-index__point-content">
 			<h2 class="section-title">

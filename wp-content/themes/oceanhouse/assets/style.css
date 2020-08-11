@@ -445,6 +445,7 @@ textarea {
 .header__list li a {
   font-family: "Noto Serif JP", serif;
   color: #fff;
+  letter-spacing: 0.15em;
 }
 
 .header__logo a {
@@ -639,6 +640,7 @@ textarea {
 .hero__title {
   font-family: "Noto Serif JP", serif;
   font-size: 49px;
+  font-weight: normal;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -703,7 +705,6 @@ textarea {
   width: 100%;
   height: 1px;
   transition: opacity 0.25s ease-in-out;
-  opacity: .4;
   opacity: 0;
   background-color: #afbabf;
 }
@@ -793,6 +794,7 @@ textarea {
 
 .section-title {
   font-family: "Noto Serif JP", serif;
+  font-weight: normal;
   position: relative;
   z-index: 1;
 }
@@ -931,14 +933,6 @@ textarea {
 
 .flow__list.is-active .flow__item:nth-child(6) {
   transition-delay: 2.5s;
-}
-
-.flow__list.is-active .flow__item:nth-child(6):before {
-  height: 140px;
-}
-
-.flow__list.is-active .flow__item:nth-child(6):after {
-  width: 140px;
 }
 
 .flow__list.is-active .flow__item:nth-child(7) {
@@ -1082,27 +1076,8 @@ textarea {
   }
 }
 
-.flow__item:nth-child(6):before {
-  position: absolute;
-  top: 282px;
-  left: 50%;
-  display: block;
-  width: 1px;
-  height: 140px;
-  content: '';
-  transition: height 0.25s ease-in-out 2.7s;
-  background-color: #222;
-}
-
 .flow__item:nth-child(6):after {
-  top: auto;
-  bottom: -185px;
-  left: 50%;
-  width: 140px;
-  height: 140px;
-  transition: width 0.25s ease-in-out 2.9s;
-  transform: rotate(180deg);
-  border-right: none;
+  display: none;
 }
 
 .flow__item:last-child {
@@ -1136,7 +1111,7 @@ textarea {
   width: 97%;
   height: 93%;
   content: '';
-  border: 1px solid #222;
+  border: 1px solid #c0c0c0;
 }
 
 @media screen and (max-width: 767px) {
@@ -1157,6 +1132,42 @@ textarea {
     height: 50px;
     margin-bottom: 40px;
   }
+}
+
+.flow__item-arrow {
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .flow__item-arrow {
+    display: none;
+  }
+}
+
+.flow__item-arrow:before {
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  display: block;
+  width: 140px;
+  height: 140px;
+  content: '';
+  transition: height 0.25s ease-in-out 2.7s;
+  border-left: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+
+.flow__item-arrow:after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 8px;
+  border-color: transparent transparent transparent #222;
+  position: absolute;
+  top: 179px;
+  right: 7px;
 }
 
 .flow-block {
@@ -1661,6 +1672,7 @@ textarea {
 
 .prefooter__title {
   font-size: 25px;
+  font-weight: normal;
   margin-bottom: 80px;
 }
 
@@ -1705,6 +1717,7 @@ textarea {
 
 .prefooter__cta-ja {
   font-size: 21px;
+  font-weight: normal;
   margin-bottom: 5px;
 }
 
@@ -1882,14 +1895,14 @@ textarea {
 .l-index__concept-image img,
 .l-index__point-image img {
   width: 100%;
-  height: auto;
+  height: 683px;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 767px) {
   .l-index__concept-image img,
   .l-index__point-image img {
     height: 295px;
-    object-fit: cover;
   }
 }
 
@@ -1982,6 +1995,7 @@ textarea {
 }
 
 .l-index__point-image {
+  position: relative;
   -ms-flex-order: 2;
       order: 2;
 }
@@ -1990,6 +2004,46 @@ textarea {
   .l-index__point-image {
     margin-top: 55px;
   }
+}
+
+.l-index__point-progress {
+  position: absolute;
+  right: 50px;
+  bottom: 25px;
+  width: 60px;
+  height: 2px;
+  background-color: #afbabf;
+}
+
+@media screen and (max-width: 767px) {
+  .l-index__point-progress {
+    right: 40px;
+    bottom: 20px;
+  }
+}
+
+.l-index__point-progress span {
+  position: relative;
+  top: -10px;
+  color: #fff;
+}
+
+.l-index__point-progress span:first-child {
+  left: -20px;
+}
+
+.l-index__point-progress span:last-child {
+  right: -60px;
+}
+
+.l-index__point-loader {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: #fff;
 }
 
 .l-index__point-content {
@@ -2054,6 +2108,7 @@ textarea {
 
 .l-index__works-item div h3 {
   font-size: 25px;
+  font-weight: normal;
   margin-bottom: 5px;
 }
 
@@ -2225,6 +2280,7 @@ textarea {
 
 .l-index__reasons-item h3 {
   font-size: 25px;
+  font-weight: normal;
   position: absolute;
   top: 45%;
   width: 100%;

@@ -168,6 +168,7 @@ get_header();
 						<img class="flow-block__icon" src="<?php echo IMAGE_URL; ?>concept/step-6.png">
 						<p class="flow-block__description">着工・各種検査</p>
 					</div>
+					<div class="flow__item-arrow"></div>
 				</li>
 				<li class="flow__item">
 					<div class="flow-block">

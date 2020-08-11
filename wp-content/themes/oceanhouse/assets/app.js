@@ -14016,7 +14016,7 @@ function heroAnimation() {
 			$heroWrapper.addClass(IS_SHOWN).delay(0).queue(function (next) {
 				$('#js-hero-title').find('.blur-text').addClass(IS_SHOWN).delay(700).queue(function (next) {
 					$heroTagline.addClass(IS_SHOWN).delay(1000).queue(function (next) {
-						$('.js-slider-progress').addClass(IS_SHOWN);
+						$('.js-hero-progress').addClass(IS_SHOWN);
 					});
 				});
 			});
@@ -14040,7 +14040,7 @@ function initSliders() {
 	var $heroJaTagline = $('#js-hero-tagline-ja');
 
 	var time = 2;
-	var $bar = $('.js-slider-progress span'),
+	var $bar = $('.js-hero-progress span'),
 	    isPause = void 0,
 	    tick = void 0,
 	    percentTime = void 0;
@@ -14231,16 +14231,21 @@ function scrollActivate() {
 
     function startPointSlider() {
         pointSliderInitialized = true;
+        var time = 2;
+        var $bar = $('.js-point-progress div'),
+            isPause = void 0,
+            tick = void 0,
+            percentTime = void 0;
 
         $('#js-point-slider').slick({
             arrows: false,
             dots: false,
             fade: true,
             autoplay: true,
-            autoplaySpeed: 3000,
+            autoplaySpeed: 10000,
             pauseOnHover: false,
             infinite: true,
-            speed: 1500,
+            speed: 1000,
             cssEase: 'ease-out',
             responsive: [{
                 breakpoint: 768,
@@ -14249,6 +14254,32 @@ function scrollActivate() {
                 }
             }]
         });
+
+        function startProgressbar() {
+            resetProgressbar();
+            percentTime = 0;
+            isPause = false;
+            tick = setInterval(interval, 30);
+        }
+        function interval() {
+            if (isPause === false) {
+                percentTime += 1 / (time + 0.1);
+                $bar.css({
+                    width: percentTime + '%'
+                });
+                if (percentTime >= 100) {
+                    $('#js-point-slider').slick('slickNext');
+                    startProgressbar();
+                }
+            }
+        }
+        function resetProgressbar() {
+            $bar.css({
+                width: 0 + '%'
+            });
+            clearTimeout(tick);
+        }
+        startProgressbar();
 
         function setPointTitle(index) {
             var $pointJaTitle = $('#js-point-title-ja');
@@ -14276,6 +14307,8 @@ function scrollActivate() {
             $('#js-point-title-ja').hide();
 
             setPointTitle(nextSlide);
+
+            $('#js-point-current').text(nextSlide + 1);
         });
     }
 }

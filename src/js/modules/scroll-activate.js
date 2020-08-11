@@ -56,16 +56,21 @@ export default function scrollActivate() {
 
     function startPointSlider() {
         pointSliderInitialized = true;
+        let time = 2;
+        let $bar = $('.js-point-progress div'),
+        isPause,
+        tick,
+        percentTime;
 
         $('#js-point-slider').slick({
             arrows: false,
             dots: false,
             fade: true,
             autoplay: true,
-            autoplaySpeed: 3000,
+            autoplaySpeed: 10000,
             pauseOnHover: false,
             infinite: true,
-            speed: 1500,
+            speed: 1000,
             cssEase: 'ease-out',
             responsive: [
                 {
@@ -76,6 +81,33 @@ export default function scrollActivate() {
                 }
             ]
         });
+
+        function startProgressbar() {
+            resetProgressbar();
+            percentTime = 0;
+            isPause = false;
+            tick = setInterval(interval, 30);
+        }
+        function interval() {
+            if (isPause === false) {
+                percentTime += 1 / (time + 0.1);
+                $bar.css({
+                    width: percentTime + '%'
+                });
+                if (percentTime >= 100) {
+                    $('#js-point-slider').slick('slickNext');
+                    startProgressbar();
+                }
+                
+            }
+        }
+        function resetProgressbar() {
+            $bar.css({
+                width: 0 + '%'
+            });
+            clearTimeout(tick);
+        }
+        startProgressbar();
 
         function setPointTitle(index) {
             let $pointJaTitle = $('#js-point-title-ja');
@@ -103,6 +135,8 @@ export default function scrollActivate() {
             $('#js-point-title-ja').hide();
 
             setPointTitle(nextSlide);
+
+            $('#js-point-current').text(nextSlide + 1);
         });
     }
 }

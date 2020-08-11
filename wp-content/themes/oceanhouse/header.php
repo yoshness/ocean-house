@@ -22,6 +22,8 @@
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/style.css?v=06">
 
 		<title>Ocean House</title>
+
+		<link rel="shortcut icon" type="image/x-icon" href="<?php echo IMAGE_URL; ?>favicon.ico"/>
 		
 		<?php wp_head(); ?>
 	</head>
