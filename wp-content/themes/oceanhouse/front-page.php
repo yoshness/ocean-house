@@ -49,7 +49,7 @@ get_header();
 	</div>
 	<section class="l-index__concept u-flex js-scroll-activate">
 		<div class="l-index__concept-image">
-			<img class="blur-image" src="<?php echo IMAGE_URL; ?>index/concept.jpg">
+			<img src="<?php echo IMAGE_URL; ?>index/concept.jpg">
 		</div>
 		<div class="l-index__concept-content">
 			<h2 class="section-title">
@@ -71,7 +71,7 @@ get_header();
 		</div>
 	</section>
 	<section class="l-index__point u-flex js-scroll-activate" id="js-point-section">
-		<div class="l-index__point-image blur-image">
+		<div class="l-index__point-image">
 			<div id="js-point-slider">
 				<img src="<?php echo IMAGE_URL; ?>index/point-1.jpg">
 				<img src="<?php echo IMAGE_URL; ?>index/point-2.jpg">
@@ -109,7 +109,7 @@ get_header();
 		<p class="l-index__works-description activate-text">
 			オーシャンハウスでは、<br class="u-show-sp">建てられる物件の数に限りがあります。<br>土地探しから、理想の住居設計、<br class="u-show-sp">建築までを完全サポート。<br>マイホームは人生を変える大きなお買い物。<br>明るい未来を過ごしてもらいたいからこそ、<br class="u-show-sp">一人ひとりのお客様と真摯に向き合います。
 		</p>
-		<ul class="l-index__works-list blur-image" id="js-works-slider">
+		<ul class="l-index__works-list" id="js-works-slider">
 			<li class="l-index__works-item">
 				<div style="background-image: url(<?php echo IMAGE_URL; ?>index/works-1.jpg);">
 					<h3>海辺の住宅</h3>
@@ -135,7 +135,7 @@ get_header();
 			<h2 class="section-title">
 				<span class="section-title__ja blur-text js-separate-letters">理想を叶える、スペシャリスト</span>
 			</h2>
-			<ul class="l-index__people-list blur-image u-flex" id="js-people-slider">
+			<ul class="l-index__people-list u-flex" id="js-people-slider">
 				<li class="l-index__people-item">
 					<img src="<?php echo IMAGE_URL; ?>index/people-1.jpg" alt="">
 					<div class="l-index__people-overlay">
@@ -173,22 +173,22 @@ get_header();
 			</h2>
 			<ul class="l-index__reasons-list u-flex">
 				<li class="l-index__reasons-item">
-					<div class="blur-image" style="background-image: url(<?php echo IMAGE_URL; ?>index/reasons-1.jpg);"></div>
+					<div style="background-image: url(<?php echo IMAGE_URL; ?>index/reasons-1.jpg);"></div>
 					<h3 class="blur-text js-separate-letters">家づくりへの想い</h3>
 					<p class="blur-text js-separate-letters">OUR THOUGHTS</p>
 				</li>
 				<li class="l-index__reasons-item">
-					<div class="blur-image" style="background-image: url(<?php echo IMAGE_URL; ?>index/reasons-2.jpg);"></div>
+					<div style="background-image: url(<?php echo IMAGE_URL; ?>index/reasons-2.jpg);"></div>
 					<h3 class="blur-text js-separate-letters">オーダーメイドのこだわり</h3>
 					<p class="blur-text js-separate-letters">ORDER MADE</p>
 				</li>
 				<li class="l-index__reasons-item">
-					<div class="blur-image" style="background-image: url(<?php echo IMAGE_URL; ?>index/reasons-3.jpg);"></div>
+					<div style="background-image: url(<?php echo IMAGE_URL; ?>index/reasons-3.jpg);"></div>
 					<h3 class="blur-text js-separate-letters">技術力と環境性能</h3>
 					<p class="blur-text js-separate-letters">STRENGTH</p>
 				</li>
 				<li class="l-index__reasons-item">
-					<div class="blur-image" style="background-image: url(<?php echo IMAGE_URL; ?>index/reasons-4.jpg);"></div>
+					<div style="background-image: url(<?php echo IMAGE_URL; ?>index/reasons-4.jpg);"></div>
 					<h3 class="blur-text js-separate-letters">安心のアフターサポート</h3>
 					<p class="blur-text js-separate-letters">AFTER SUPPORT</p>
 				</li>

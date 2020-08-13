@@ -25,7 +25,7 @@ get_header();
 				テキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキスト
 			</p>
 		</div>
-		<img class="blur-image" src="<?php echo IMAGE_URL; ?>concept/intro.jpg" alt="">
+		<img src="<?php echo IMAGE_URL; ?>concept/intro.jpg" alt="">
 	</section>
 	<section class="l-concept__thoughts u-flex js-scroll-activate">
 		<div class="l-concept__thoughts-content activate-box">
@@ -49,7 +49,7 @@ get_header();
 			</div>
 		</div>
 		<div class="l-concept__thoughts-image">
-			<img class="blur-image" src="<?php echo IMAGE_URL; ?>concept/thoughts.jpg">
+			<img src="<?php echo IMAGE_URL; ?>concept/thoughts.jpg">
 		</div>
 	</section>
 	<section class="l-concept__order u-flex js-scroll-activate">
@@ -68,7 +68,7 @@ get_header();
 			</div>
 		</div>
 		<div class="l-concept__order-image">
-			<img class="blur-image" src="<?php echo IMAGE_URL; ?>concept/order.jpg">
+			<img src="<?php echo IMAGE_URL; ?>concept/order.jpg">
 		</div>
 	</section>
 	<section class="l-concept__specs js-scroll-activate">
@@ -82,7 +82,7 @@ get_header();
 				だからこそ、オーシャンハウスが出がける物件は、<br>
 				高いデザイン性だけでなく、耐震強度・環境対応・高齢化社会への対応を考慮します。<br>
 			</p>
-			<ul class="l-concept__specs-list u-flex blur-image">
+			<ul class="l-concept__specs-list u-flex">
 				<li>
 					<div class="spec-block">
 						<img src="<?php echo IMAGE_URL; ?>concept/specs-1.jpg">
@@ -118,7 +118,7 @@ get_header();
 			<p class="activate-text">
 				当社アフターサービス基準に則り、最大30年間にわたり住宅品質を保証しています。<br>お客様が保証期間の延長をご希望される場合、延長保証点検および、<br>有料メンテナンス工事を実施することで、基礎、躯体などの長期保証部位について、<br>さらに10年間延長し、お引き渡しより最大30年保証いたします。
 			</p>
-			<img class="blur-image" src="<?php echo IMAGE_URL; ?>concept/support.jpg">
+			<img src="<?php echo IMAGE_URL; ?>concept/support.jpg">
 		</div>
 	</section>
 	<section class="l-concept__flow js-scroll-activate">
