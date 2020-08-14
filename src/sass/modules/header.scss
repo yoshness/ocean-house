@@ -7,7 +7,8 @@
     width: 50%;
 
     @include max-screen($breakpoint-mobile) {
-        position: relative;
+        position: fixed;
+        z-index: 30;
         top: 0;
         left: 0;
 
@@ -59,8 +60,9 @@
         a {
             font-family: $font-noto;
 
+            letter-spacing: .15em;
+
             color: #fff;
-            letter-spacing: 0.15em;
         }
     }
 }

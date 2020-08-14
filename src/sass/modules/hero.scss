@@ -12,7 +12,7 @@
     filter: blur(10px) saturate(.1);
     @include max-screen($breakpoint-mobile) {
         width: 100%;
-        height: calc(100vh - 55px);
+        height: 100vh;
     }
 
     &.is-shown {
@@ -32,7 +32,7 @@
         background-size: cover;
 
         @include max-screen($breakpoint-mobile) {
-            height: calc(100vh - 55px);
+            height: 100vh;
         }
     }
 }

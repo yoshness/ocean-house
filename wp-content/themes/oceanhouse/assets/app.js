@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 12);
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -13977,11 +13977,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_hero_animation__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_separate_letters__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_scroll_activate__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modules_toggle_menu__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modules_toggle_menu__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__modules_scroll_to_element__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__modules_slide_down__ = __webpack_require__(10);
 
 window.jQuery = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
 window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
+
 
 
 
@@ -13996,6 +13998,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__modules_separate_letters__["a
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__modules_scroll_activate__["a" /* default */])();
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__modules_toggle_menu__["a" /* default */])();
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__modules_scroll_to_element__["a" /* default */])();
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__modules_slide_down__["a" /* default */])();
 
 /***/ }),
 /* 3 */,
@@ -14379,6 +14382,32 @@ function separateLetters() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = slideDown;
+function slideDown() {
+	var $target = $('.js-slide-down');
+
+	if ($(window).width() < 768) {
+		$target.on('click', function (e) {
+			var $el = $(e.currentTarget);
+
+			$el.css('height', $el.data('height'));
+			$el.removeClass('is-hidden');
+		});
+
+		$.each($target, function (index, el) {
+			var elHeight = $(el).outerHeight();
+
+			$(el).attr('data-height', elHeight);
+			$(el).addClass('is-hidden');
+		});
+	}
+}
+
+/***/ }),
+/* 11 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = toggleMenu;
 function toggleMenu() {
 	var $el = $('#js-toggle-menu'),
@@ -14398,8 +14427,8 @@ function toggleMenu() {
 }
 
 /***/ }),
-/* 11 */,
-/* 12 */
+/* 12 */,
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(2);

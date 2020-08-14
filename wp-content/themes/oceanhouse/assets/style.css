@@ -399,7 +399,8 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .header {
-    position: relative;
+    position: fixed;
+    z-index: 30;
     top: 0;
     left: 0;
     width: 100%;
@@ -444,8 +445,8 @@ textarea {
 
 .header__list li a {
   font-family: "Noto Serif JP", serif;
+  letter-spacing: .15em;
   color: #fff;
-  letter-spacing: 0.15em;
 }
 
 .header__logo a {
@@ -541,7 +542,7 @@ textarea {
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   z-index: 30;
   top: 0;
   left: 0;
@@ -614,7 +615,7 @@ textarea {
 @media screen and (max-width: 767px) {
   .hero {
     width: 100%;
-    height: calc(100vh - 55px);
+    height: 100vh;
   }
 }
 
@@ -633,7 +634,7 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .hero__slider-item div {
-    height: calc(100vh - 55px);
+    height: 100vh;
   }
 }
 
@@ -1852,6 +1853,20 @@ textarea {
 
 .activate-box.is-shown:before {
   background-color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .slide-down {
+    overflow: hidden;
+    cursor: pointer;
+    transition: height 0.7s ease-in-out;
+  }
+  .slide-down.is-hidden {
+    position: relative;
+    height: 75px;
+    opacity: .4;
+    box-shadow: 0 -15px 5px #fff;
+  }
 }
 
 .l-container {

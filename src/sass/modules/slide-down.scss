@@ -1,0 +1,17 @@
+.slide-down {
+    @include max-screen($breakpoint-mobile) {
+        overflow: hidden;
+
+        cursor: pointer;
+        transition: height $duration-long $easing;
+
+        &.is-hidden {
+            position: relative;
+
+            height: 75px;
+
+            opacity: .4;
+            box-shadow: 0 -15px 5px #fff;
+        }
+    }
+}
