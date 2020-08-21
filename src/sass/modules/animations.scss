@@ -6,3 +6,12 @@
         width: 100%;
     }
 }
+
+@keyframes panPhoto {
+  	0% {
+    	background-position: 30% center;
+  	}
+  	100% {
+    	background-position: 100% center;
+  	}
+}

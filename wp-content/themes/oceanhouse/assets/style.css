@@ -429,29 +429,67 @@ textarea {
   display: none;
 }
 
+.header__list {
+  width: 39.7vw;
+}
+
+@media screen and (max-width: 1200px) {
+  .header__list {
+    width: 45vw;
+    transform: scale(0.85);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .header__list {
+    width: 48vw;
+    transform: scale(0.75);
+  }
+}
+
 @media screen and (max-width: 767px) {
   .header__list {
     display: none;
   }
 }
 
-.header__list li {
-  width: 23%;
-}
-
-.header__list li:last-child {
-  width: 31%;
-}
-
 .header__list li a {
-  font-family: "Noto Serif JP", serif;
-  letter-spacing: .15em;
+  font-family: ヒラギノ明朝 Pro W3, YuMincho, 游明朝, "Noto Serif JP", Times New Roman, Hiragino Mincho ProN, HGS明朝B, ＭＳ Ｐ明朝, serif, Meiryo, Sawarabi Mincho, メイリオ, ＭＳ Ｐゴシック, sans-serif;
+  position: relative;
+  letter-spacing: .2em;
   color: #fff;
+}
+
+.header__list li a:after {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 2px;
+  content: '';
+  background-color: #fff;
+}
+
+.header__list li a:hover:after {
+  animation: left-to-right 0.25s normal forwards ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  .header__logo {
+    text-align: center;
+  }
 }
 
 .header__logo a {
   display: block;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .header__logo a {
+    display: inline-block;
+  }
 }
 
 .header__logo a img {
@@ -582,7 +620,7 @@ textarea {
 }
 
 .menu__item a {
-  font-family: "Noto Serif JP", serif;
+  font-family: ヒラギノ明朝 Pro W3, YuMincho, 游明朝, "Noto Serif JP", Times New Roman, Hiragino Mincho ProN, HGS明朝B, ＭＳ Ｐ明朝, serif, Meiryo, Sawarabi Mincho, メイリオ, ＭＳ Ｐゴシック, sans-serif;
   position: relative;
   letter-spacing: .1em;
   color: #151515;
@@ -639,7 +677,7 @@ textarea {
 }
 
 .hero__title {
-  font-family: "Noto Serif JP", serif;
+  font-family: ヒラギノ明朝 Pro W3, YuMincho, 游明朝, "Noto Serif JP", Times New Roman, Hiragino Mincho ProN, HGS明朝B, ＭＳ Ｐ明朝, serif, Meiryo, Sawarabi Mincho, メイリオ, ＭＳ Ｐゴシック, sans-serif;
   font-size: 49px;
   font-weight: normal;
   position: absolute;
@@ -659,11 +697,13 @@ textarea {
 }
 
 .hero__tagline {
-  font-size: 12px;
+  font-family: ヒラギノ明朝 Pro W3, YuMincho, 游明朝, "Noto Serif JP", Times New Roman, Hiragino Mincho ProN, HGS明朝B, ＭＳ Ｐ明朝, serif, Meiryo, Sawarabi Mincho, メイリオ, ＭＳ Ｐゴシック, sans-serif;
+  font-size: 11px;
   position: absolute;
   bottom: 40px;
   left: 35px;
   transition: opacity 0.25s ease-in-out;
+  letter-spacing: .4em;
   opacity: 0;
   color: #fff;
 }
@@ -759,7 +799,7 @@ textarea {
 }
 
 .logo__scroll {
-  font-family: "Noto Serif JP", serif;
+  font-family: ヒラギノ明朝 Pro W3, YuMincho, 游明朝, "Noto Serif JP", Times New Roman, Hiragino Mincho ProN, HGS明朝B, ＭＳ Ｐ明朝, serif, Meiryo, Sawarabi Mincho, メイリオ, ＭＳ Ｐゴシック, sans-serif;
   position: absolute;
   bottom: 150px;
   left: 45%;
@@ -794,7 +834,7 @@ textarea {
 }
 
 .section-title {
-  font-family: "Noto Serif JP", serif;
+  font-family: ヒラギノ明朝 Pro W3, YuMincho, 游明朝, "Noto Serif JP", Times New Roman, Hiragino Mincho ProN, HGS明朝B, ＭＳ Ｐ明朝, serif, Meiryo, Sawarabi Mincho, メイリオ, ＭＳ Ｐゴシック, sans-serif;
   font-weight: normal;
   position: relative;
   z-index: 1;
@@ -815,6 +855,7 @@ textarea {
 
 .section-title__ja {
   font-size: 25px;
+  line-height: 1.7;
   display: block;
   letter-spacing: .1em;
 }
@@ -1180,6 +1221,7 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .flow-block {
+    min-height: 264px;
     padding: 30px 15px;
   }
 }
@@ -1537,6 +1579,7 @@ textarea {
   .form__submit {
     width: 100%;
     margin-top: 50px;
+    background: #fff;
   }
 }
 
@@ -1656,8 +1699,17 @@ textarea {
   }
 }
 
+@keyframes panPhoto {
+  0% {
+    background-position: 30% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
+}
+
 .prefooter {
-  font-family: "Noto Serif JP", serif;
+  font-family: ヒラギノ明朝 Pro W3, YuMincho, 游明朝, "Noto Serif JP", Times New Roman, Hiragino Mincho ProN, HGS明朝B, ＭＳ Ｐ明朝, serif, Meiryo, Sawarabi Mincho, メイリオ, ＭＳ Ｐゴシック, sans-serif;
   padding: 90px 170px;
   text-align: center;
   letter-spacing: .1em;
@@ -1780,7 +1832,7 @@ textarea {
 }
 
 .footer__text {
-  font-family: "Noto Serif JP", serif;
+  font-family: ヒラギノ明朝 Pro W3, YuMincho, 游明朝, "Noto Serif JP", Times New Roman, Hiragino Mincho ProN, HGS明朝B, ＭＳ Ｐ明朝, serif, Meiryo, Sawarabi Mincho, メイリオ, ＭＳ Ｐゴシック, sans-serif;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: .1em;
@@ -2101,7 +2153,7 @@ textarea {
 }
 
 .l-index__works-item div {
-  font-family: "Noto Serif JP", serif;
+  font-family: ヒラギノ明朝 Pro W3, YuMincho, 游明朝, "Noto Serif JP", Times New Roman, Hiragino Mincho ProN, HGS明朝B, ＭＳ Ｐ明朝, serif, Meiryo, Sawarabi Mincho, メイリオ, ＭＳ Ｐゴシック, sans-serif;
   height: 540px;
   margin: 0 15px;
   padding: 45px 50px;
@@ -2174,7 +2226,7 @@ textarea {
 }
 
 .l-index__people-overlay {
-  font-family: "Noto Serif JP", serif;
+  font-family: ヒラギノ明朝 Pro W3, YuMincho, 游明朝, "Noto Serif JP", Times New Roman, Hiragino Mincho ProN, HGS明朝B, ＭＳ Ｐ明朝, serif, Meiryo, Sawarabi Mincho, メイリオ, ＭＳ Ｐゴシック, sans-serif;
   position: absolute;
   top: 0;
   left: -100%;
@@ -2252,12 +2304,12 @@ textarea {
 }
 
 .l-index__reasons-item {
-  font-family: "Noto Serif JP", serif;
+  font-family: ヒラギノ明朝 Pro W3, YuMincho, 游明朝, "Noto Serif JP", Times New Roman, Hiragino Mincho ProN, HGS明朝B, ＭＳ Ｐ明朝, serif, Meiryo, Sawarabi Mincho, メイリオ, ＭＳ Ｐゴシック, sans-serif;
   position: relative;
   width: 48%;
   margin-bottom: 45px;
   letter-spacing: .1em;
-  color: #fff;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 767px) {
@@ -2267,12 +2319,22 @@ textarea {
   }
 }
 
+.l-index__reasons-item a {
+  color: #fff;
+}
+
+.l-index__reasons-item a:hover div {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
 .l-index__reasons-item div {
   position: relative;
   width: 100%;
   height: 330px;
+  transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 30% center;
   background-size: cover;
 }
 
@@ -2537,7 +2599,8 @@ textarea {
 
 .l-concept__support img {
   width: 100%;
-  height: 406px;
+  height: 505px;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 767px) {

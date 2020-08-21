@@ -46,32 +46,69 @@
 }
 
 .header__list {
+    width: 39.7vw;
+
+    @include max-screen(1200px) {
+        width: 45vw;
+
+        transform: scale(.85);
+    }
+    @include max-screen(950px) {
+        width: 48vw;
+
+        transform: scale(.75);
+    }
     @include max-screen($breakpoint-mobile) {
         display: none;
     }
 
     li {
-        width: 23%;
-
-        &:last-child {
-            width: 31%;
-        }
-
         a {
             font-family: $font-noto;
 
-            letter-spacing: .15em;
+            position: relative;
+
+            letter-spacing: .2em;
 
             color: #fff;
+
+            &:after {
+                position: absolute;
+                bottom: -8px;
+                left: 0;
+
+                display: block;
+
+                width: 0;
+                height: 2px;
+
+                content: '';
+
+                background-color: #fff;
+            }
+
+            &:hover {
+                &:after {
+                    animation: left-to-right $duration normal forwards ease-in-out;
+                }
+            }
         }
     }
 }
 
 .header__logo {
+    @include max-screen($breakpoint-mobile) {
+        text-align: center;
+    }
+
     a {
         display: block;
 
         text-align: center;
+
+        @include max-screen($breakpoint-mobile) {
+            display: inline-block;
+        }
 
         img {
             width: 110px;

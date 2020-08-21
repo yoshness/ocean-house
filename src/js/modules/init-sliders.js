@@ -11,6 +11,8 @@ export default function initSliders() {
     tick,
     percentTime;
 
+    let pointSliderInitialized = false;
+
     $('#js-hero-slider').slick({
 		arrows: false,
 		dots: false,
@@ -137,4 +139,92 @@ export default function initSliders() {
 	    	}
 	    ]
 	});
+
+	function startPointSlider() {
+        pointSliderInitialized = true;
+        let time = 2;
+        let $bar = $('.js-point-progress div'),
+        isPause,
+        tick,
+        percentTime;
+
+        $('#js-point-slider').slick({
+            arrows: false,
+            dots: false,
+            fade: true,
+            autoplay: true,
+            autoplaySpeed: 10000,
+            pauseOnHover: false,
+            infinite: true,
+            speed: 1000,
+            cssEase: 'ease-out',
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        centerMode: false,
+                    }
+                }
+            ]
+        });
+
+        function startProgressbar() {
+            resetProgressbar();
+            percentTime = 0;
+            isPause = false;
+            tick = setInterval(interval, 30);
+        }
+        function interval() {
+            if (isPause === false) {
+                percentTime += 1 / (time + 0.1);
+                $bar.css({
+                    width: percentTime + '%'
+                });
+                if (percentTime >= 100) {
+                    $('#js-point-slider').slick('slickNext');
+                    startProgressbar();
+                }
+                
+            }
+        }
+        function resetProgressbar() {
+            $bar.css({
+                width: 0 + '%'
+            });
+            clearTimeout(tick);
+        }
+        startProgressbar();
+
+        function setPointTitle(index) {
+            let $pointJaTitle = $('#js-point-title-ja');
+
+            switch(index) {
+                case 1:
+                    $pointJaTitle.text('理想を叶える、自由設計');
+                    break;
+                case 2:
+                    $pointJaTitle.text('災害に備えた、耐震設計');
+                    break;
+                case 3:
+                    $pointJaTitle.text('良心的な、価格設定');
+                    break;
+                default:
+                    $pointJaTitle.text('好きな場所で、家を建てる');
+                    break;
+            }
+
+            $pointJaTitle.fadeIn(1000);
+        }
+
+        $('#js-point-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            $('#js-point-title-ja').empty();
+            $('#js-point-title-ja').hide();
+
+            setPointTitle(nextSlide);
+
+            $('#js-point-current').text(nextSlide + 1);
+        });
+    }
+
+    startPointSlider();
 }

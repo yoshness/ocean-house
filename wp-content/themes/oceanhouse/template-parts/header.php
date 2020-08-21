@@ -4,8 +4,8 @@
 			<a href="<?php echo HOME_URL; ?>concept">CONCEPT</a>
 		</li>
 		<li class="header__item--model">
-			<a href="#js-point-section" class="js-scroll">MODEL</a>
-			<a href="<?php echo HOME_URL; ?>#js-point-section">MODEL</a>
+			<a href="#js-model-section" class="js-scroll">MODEL</a>
+			<a href="<?php echo HOME_URL; ?>#js-model-section">MODEL</a>
 		</li>
 		<li>
 			<a href="<?php echo HOME_URL; ?>company">COMPANY</a>

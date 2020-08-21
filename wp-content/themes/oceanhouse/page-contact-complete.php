@@ -12,11 +12,11 @@ get_header();
 			<a href="<?php echo HOME_URL; ?>">
 				<img class="logo__img" src="<?php echo IMAGE_URL; ?>logo.png">
 			</a>
-			<a class="logo__scroll" href="#">SCROLL</a>
+			<a class="logo__scroll js-scroll" href="#js-content">SCROLL</a>
 		</div>
 		<div class="banner__img" style="background-image: url(<?php echo IMAGE_URL; ?>contact/banner.jpg);"></div>
 	</div>
-	<div class="l-contact__content js-scroll-activate">
+	<div class="l-contact__content js-scroll-activate" id="js-content">
 		<div class="l-container">
 			<h2 class="section-title">
 				<span class="section-title__en blur-text js-separate-letters">COMPLETE</span>

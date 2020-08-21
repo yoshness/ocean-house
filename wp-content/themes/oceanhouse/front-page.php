@@ -23,7 +23,7 @@ get_header();
 			<a href="<?php echo HOME_URL; ?>">
 				<img class="logo__img" src="<?php echo IMAGE_URL; ?>logo.png">
 			</a>
-			<a class="logo__scroll" href="#">SCROLL</a>
+			<a class="logo__scroll js-scroll" href="#js-concept-section">SCROLL</a>
 		</div>
 		<div class="hero" id="js-hero">
 			<ul class="hero__slider" id="js-hero-slider">
@@ -47,7 +47,7 @@ get_header();
 			</div>
 		</div>
 	</div>
-	<section class="l-index__concept u-flex js-scroll-activate">
+	<section class="l-index__concept u-flex js-scroll-activate" id="js-concept-section">
 		<div class="l-index__concept-image">
 			<img src="<?php echo IMAGE_URL; ?>index/concept.jpg">
 		</div>
@@ -60,15 +60,12 @@ get_header();
 				<p>
 					人生で、一番大切なもの。<br>それはきっと、お金じゃない。<br class="u-show-sp">きっと仕事や地位でもない。
 				</p>
-				<div class="slide-down js-slide-down">
-					<p>
-					それは好きな人と過ごす時間。自分らしく、開放感のある、最高の時間。<br>でも忙しい毎日、そんな時間が限られている。
-					</p>
-					<p>
-						だからこそ、本当に好きな場所に住もう。<br>何ひとつ妥協のない、こだわり抜いた家で暮らそう。<br>オンもオフも充実する、至高の居住性。土地選び、間取り、デザイン、設備<br>全てがオーダーメイド。でも手が届く価格帯。
-					</p>
-					<a class="l-index__concept-arrow" href="<?php echo HOME_URL; ?>concept"></a>
-				</div>
+				<p>
+				それは好きな人と過ごす時間。自分らしく、開放感のある、最高の時間。<br>でも忙しい毎日、そんな時間が限られている。
+				</p>
+				<p>
+					だからこそ、本当に好きな場所に住もう。<br>何ひとつ妥協のない、こだわり抜いた家で暮らそう。<br>オンもオフも充実する、至高の居住性。土地選び、間取り、デザイン、設備<br>全てがオーダーメイド。でも手が届く価格帯。
+				</p>
 			</div>
 		</div>
 	</section>
@@ -95,20 +92,22 @@ get_header();
 				<p>
 					テキストが入ります、<br>テキストが入ります、テキストが入ります、テキストが入ります、
 				</p>
-				<div class="slide-down js-slide-down">
-					<p>
-						テキストが入ります、テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、
-					</p>
-					<p>
-						テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、テキストが入ります、<br>テキストが入ります、
-					</p>
-				</div>
+				<p>
+					テキストが入ります、テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、
+				</p>
+				<p>
+					テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、テキストが入ります、<br>テキストが入ります、
+				</p>
 			</div>
 		</div>
 	</section>
-	<section class="l-index__works js-scroll-activate">
-		<h2 class="section-title">
+	<section class="l-index__works js-scroll-activate" id="js-model-section">
+		<h2 class="section-title u-show-pc">
 			<span class="section-title__ja blur-text js-separate-letters">好きな場所に、オーダーメイド住宅を</span>
+		</h2>
+		<h2 class="section-title u-show-sp">
+			<div class="section-title__ja blur-text js-separate-letters">好きな場所に、</div>
+			<div class="section-title__ja blur-text js-separate-letters">オーダーメイド住宅を</div>
 		</h2>
 		<p class="l-index__works-description activate-text">
 			オーシャンハウスでは、<br class="u-show-sp">建てられる物件の数に限りがあります。<br>土地探しから、理想の住居設計、<br class="u-show-sp">建築までを完全サポート。<br>マイホームは人生を変える大きなお買い物。<br>明るい未来を過ごしてもらいたいからこそ、<br class="u-show-sp">一人ひとりのお客様と真摯に向き合います。
@@ -172,29 +171,41 @@ get_header();
 	</section>
 	<section class="l-index__reasons js-scroll-activate">
 		<div class="l-container">
-			<h2 class="section-title">
+			<h2 class="section-title u-show-pc">
 				<span class="section-title__ja blur-text js-separate-letters">オーシャンハウスが選ばれる理由</span>
+			</h2>
+			<h2 class="section-title u-show-sp">
+				<div class="section-title__ja blur-text js-separate-letters">オーシャンハウスが</div>
+				<div class="section-title__ja blur-text js-separate-letters">選ばれる理由</div>
 			</h2>
 			<ul class="l-index__reasons-list u-flex">
 				<li class="l-index__reasons-item">
-					<div style="background-image: url(<?php echo IMAGE_URL; ?>index/reasons-1.jpg);"></div>
-					<h3 class="blur-text js-separate-letters">家づくりへの想い</h3>
-					<p class="blur-text js-separate-letters">OUR THOUGHTS</p>
+					<a href="<?php echo HOME_URL; ?>concept/#our-thoughts-section">
+						<div style="background-image: url(<?php echo IMAGE_URL; ?>index/reasons-1.jpg);"></div>
+						<h3 class="blur-text js-separate-letters">家づくりへの想い</h3>
+						<p class="blur-text js-separate-letters">OUR THOUGHTS</p>
+					</a>
 				</li>
 				<li class="l-index__reasons-item">
-					<div style="background-image: url(<?php echo IMAGE_URL; ?>index/reasons-2.jpg);"></div>
-					<h3 class="blur-text js-separate-letters">オーダーメイドのこだわり</h3>
-					<p class="blur-text js-separate-letters">ORDER MADE</p>
+					<a href="<?php echo HOME_URL; ?>concept/#order-made-section">
+						<div style="background-image: url(<?php echo IMAGE_URL; ?>index/reasons-2.jpg);"></div>
+						<h3 class="blur-text js-separate-letters">オーダーメイドのこだわり</h3>
+						<p class="blur-text js-separate-letters">ORDER MADE</p>
+					</a>
 				</li>
 				<li class="l-index__reasons-item">
-					<div style="background-image: url(<?php echo IMAGE_URL; ?>index/reasons-3.jpg);"></div>
-					<h3 class="blur-text js-separate-letters">技術力と環境性能</h3>
-					<p class="blur-text js-separate-letters">STRENGTH</p>
+					<a href="<?php echo HOME_URL; ?>concept/#strength-section">
+						<div style="background-image: url(<?php echo IMAGE_URL; ?>index/reasons-3.jpg);"></div>
+						<h3 class="blur-text js-separate-letters">技術力と環境性能</h3>
+						<p class="blur-text js-separate-letters">STRENGTH</p>
+					</a>
 				</li>
 				<li class="l-index__reasons-item">
-					<div style="background-image: url(<?php echo IMAGE_URL; ?>index/reasons-4.jpg);"></div>
-					<h3 class="blur-text js-separate-letters">安心のアフターサポート</h3>
-					<p class="blur-text js-separate-letters">AFTER SUPPORT</p>
+					<a href="<?php echo HOME_URL; ?>concept/#after-support-section">
+						<div style="background-image: url(<?php echo IMAGE_URL; ?>index/reasons-4.jpg);"></div>
+						<h3 class="blur-text js-separate-letters">安心のアフターサポート</h3>
+						<p class="blur-text js-separate-letters">AFTER SUPPORT</p>
+					</a>
 				</li>
 			</ul>
 		</div>

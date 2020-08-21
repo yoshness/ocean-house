@@ -60,13 +60,15 @@
 }
 
 .hero__tagline {
-    font-size: 12px;
+    font-family: $font-noto;
+    font-size: 11px;
 
     position: absolute;
     bottom: 40px;
     left: 35px;
 
     transition: opacity $duration $easing;
+    letter-spacing: .4em;
 
     opacity: 0;
     color: #fff;

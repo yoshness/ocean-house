@@ -14039,134 +14039,221 @@ function heroAnimation() {
 
 function initSliders() {
 
-	var $heroEnTagline = $('#js-hero-tagline-en');
-	var $heroJaTagline = $('#js-hero-tagline-ja');
+				var $heroEnTagline = $('#js-hero-tagline-en');
+				var $heroJaTagline = $('#js-hero-tagline-ja');
 
-	var time = 2;
-	var $bar = $('.js-hero-progress span'),
-	    isPause = void 0,
-	    tick = void 0,
-	    percentTime = void 0;
+				var time = 2;
+				var $bar = $('.js-hero-progress span'),
+				    isPause = void 0,
+				    tick = void 0,
+				    percentTime = void 0;
 
-	$('#js-hero-slider').slick({
-		arrows: false,
-		dots: false,
-		fade: true,
-		autoplay: true,
-		autoplaySpeed: 10000,
-		pauseOnHover: false,
-		infinite: true,
-		speed: 1000,
-		cssEase: 'ease-out'
-	});
+				var pointSliderInitialized = false;
 
-	function startProgressbar() {
-		resetProgressbar();
-		percentTime = 0;
-		isPause = false;
-		tick = setInterval(interval, 30);
-	}
-	function interval() {
-		if (isPause === false) {
-			percentTime += 1 / (time + 0.1);
-			$bar.css({
-				width: percentTime + '%'
-			});
-			if (percentTime >= 100) {
-				$('#js-hero-slider').slick('slickNext');
+				$('#js-hero-slider').slick({
+								arrows: false,
+								dots: false,
+								fade: true,
+								autoplay: true,
+								autoplaySpeed: 10000,
+								pauseOnHover: false,
+								infinite: true,
+								speed: 1000,
+								cssEase: 'ease-out'
+				});
+
+				function startProgressbar() {
+								resetProgressbar();
+								percentTime = 0;
+								isPause = false;
+								tick = setInterval(interval, 30);
+				}
+				function interval() {
+								if (isPause === false) {
+												percentTime += 1 / (time + 0.1);
+												$bar.css({
+																width: percentTime + '%'
+												});
+												if (percentTime >= 100) {
+																$('#js-hero-slider').slick('slickNext');
+																startProgressbar();
+												}
+								}
+				}
+				function resetProgressbar() {
+								$bar.css({
+												width: 0 + '%'
+								});
+								clearTimeout(tick);
+				}
 				startProgressbar();
-			}
-		}
-	}
-	function resetProgressbar() {
-		$bar.css({
-			width: 0 + '%'
-		});
-		clearTimeout(tick);
-	}
-	startProgressbar();
 
-	function setHeroTagline(index) {
-		switch (index) {
-			case 1:
-				$heroEnTagline.text('LIVE WITH THE FOREST');
-				$heroJaTagline.text('杜と住む');
-				break;
-			case 2:
-				$heroEnTagline.text('LIVE WITH THE HOBBY');
-				$heroJaTagline.text('趣味と住む');
-				break;
-			default:
-				$heroEnTagline.text('LIVE WITH THE SEA');
-				$heroJaTagline.text('海と住む');
-				break;
-		}
+				function setHeroTagline(index) {
+								switch (index) {
+												case 1:
+																$heroEnTagline.text('LIVE WITH THE FOREST');
+																$heroJaTagline.text('杜と住む');
+																break;
+												case 2:
+																$heroEnTagline.text('LIVE WITH THE HOBBY');
+																$heroJaTagline.text('趣味と住む');
+																break;
+												default:
+																$heroEnTagline.text('LIVE WITH THE SEA');
+																$heroJaTagline.text('海と住む');
+																break;
+								}
 
-		$heroEnTagline.fadeIn(1000);
-		$heroJaTagline.fadeIn(1000);
-	}
+								$heroEnTagline.fadeIn(1000);
+								$heroJaTagline.fadeIn(1000);
+				}
 
-	$('#js-hero-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-		$heroEnTagline.hide();
-		$heroJaTagline.hide();
+				$('#js-hero-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+								$heroEnTagline.hide();
+								$heroJaTagline.hide();
 
-		setHeroTagline(nextSlide);
-	});
+								setHeroTagline(nextSlide);
+				});
 
-	$('#js-works-slider').slick({
-		arrows: false,
-		dots: false,
-		autoplay: true,
-		autoplaySpeed: 3000,
-		pauseOnHover: false,
-		infinite: true,
-		speed: 1500,
-		cssEase: 'ease-out',
-		centerMode: true,
-		centerPadding: '20%',
-		responsive: [{
-			breakpoint: 768,
-			settings: {
-				centerMode: false
-			}
-		}]
-	});
+				$('#js-works-slider').slick({
+								arrows: false,
+								dots: false,
+								autoplay: true,
+								autoplaySpeed: 3000,
+								pauseOnHover: false,
+								infinite: true,
+								speed: 1500,
+								cssEase: 'ease-out',
+								centerMode: true,
+								centerPadding: '20%',
+								responsive: [{
+												breakpoint: 768,
+												settings: {
+																centerMode: false
+												}
+								}]
+				});
 
-	$('#js-people-slider').slick({
-		mobileFirst: true,
-		arrows: false,
-		dots: false,
-		autoplay: true,
-		autoplaySpeed: 3000,
-		pauseOnHover: false,
-		infinite: true,
-		speed: 1500,
-		cssEase: 'ease-out',
-		centerMode: true,
-		centerPadding: '20%',
-		responsive: [{
-			breakpoint: 767,
-			settings: 'unslick'
-		}]
-	});
+				$('#js-people-slider').slick({
+								mobileFirst: true,
+								arrows: false,
+								dots: false,
+								autoplay: true,
+								autoplaySpeed: 3000,
+								pauseOnHover: false,
+								infinite: true,
+								speed: 1500,
+								cssEase: 'ease-out',
+								centerMode: true,
+								centerPadding: '20%',
+								responsive: [{
+												breakpoint: 767,
+												settings: 'unslick'
+								}]
+				});
 
-	$('#js-flow-slider').slick({
-		mobileFirst: true,
-		arrows: false,
-		dots: true,
-		autoplay: true,
-		autoplaySpeed: 2000,
-		pauseOnHover: false,
-		infinite: true,
-		speed: 1000,
-		cssEase: 'ease-out',
-		centerMode: true,
-		centerPadding: '10%',
-		responsive: [{
-			breakpoint: 767,
-			settings: 'unslick'
-		}]
-	});
+				$('#js-flow-slider').slick({
+								mobileFirst: true,
+								arrows: false,
+								dots: true,
+								autoplay: true,
+								autoplaySpeed: 2000,
+								pauseOnHover: false,
+								infinite: true,
+								speed: 1000,
+								cssEase: 'ease-out',
+								centerMode: true,
+								centerPadding: '10%',
+								responsive: [{
+												breakpoint: 767,
+												settings: 'unslick'
+								}]
+				});
+
+				function startPointSlider() {
+								pointSliderInitialized = true;
+								var time = 2;
+								var $bar = $('.js-point-progress div'),
+								    isPause = void 0,
+								    tick = void 0,
+								    percentTime = void 0;
+
+								$('#js-point-slider').slick({
+												arrows: false,
+												dots: false,
+												fade: true,
+												autoplay: true,
+												autoplaySpeed: 10000,
+												pauseOnHover: false,
+												infinite: true,
+												speed: 1000,
+												cssEase: 'ease-out',
+												responsive: [{
+																breakpoint: 768,
+																settings: {
+																				centerMode: false
+																}
+												}]
+								});
+
+								function startProgressbar() {
+												resetProgressbar();
+												percentTime = 0;
+												isPause = false;
+												tick = setInterval(interval, 30);
+								}
+								function interval() {
+												if (isPause === false) {
+																percentTime += 1 / (time + 0.1);
+																$bar.css({
+																				width: percentTime + '%'
+																});
+																if (percentTime >= 100) {
+																				$('#js-point-slider').slick('slickNext');
+																				startProgressbar();
+																}
+												}
+								}
+								function resetProgressbar() {
+												$bar.css({
+																width: 0 + '%'
+												});
+												clearTimeout(tick);
+								}
+								startProgressbar();
+
+								function setPointTitle(index) {
+												var $pointJaTitle = $('#js-point-title-ja');
+
+												switch (index) {
+																case 1:
+																				$pointJaTitle.text('理想を叶える、自由設計');
+																				break;
+																case 2:
+																				$pointJaTitle.text('災害に備えた、耐震設計');
+																				break;
+																case 3:
+																				$pointJaTitle.text('良心的な、価格設定');
+																				break;
+																default:
+																				$pointJaTitle.text('好きな場所で、家を建てる');
+																				break;
+												}
+
+												$pointJaTitle.fadeIn(1000);
+								}
+
+								$('#js-point-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+												$('#js-point-title-ja').empty();
+												$('#js-point-title-ja').hide();
+
+												setPointTitle(nextSlide);
+
+												$('#js-point-current').text(nextSlide + 1);
+								});
+				}
+
+				startPointSlider();
 }
 
 /***/ }),
@@ -14185,8 +14272,6 @@ function scrollActivate() {
         IS_ACTIVE = 'is-active',
         IS_SHOWN = 'is-shown',
         IS_COLORED = 'is-colored';
-
-    var pointSliderInitialized = false;
 
     // fade-in-up on scroll
     $(window).on('load, scroll', function () {
@@ -14213,10 +14298,6 @@ function scrollActivate() {
                 $(target).find('.blur-image').addClass(IS_COLORED);
                 $(target).find('.activate-text').addClass(IS_SHOWN);
                 $(target).find('.activate-box').addClass(IS_SHOWN);
-
-                if ($(target).attr('id') == 'js-point-section' && !pointSliderInitialized) {
-                    startPointSlider();
-                }
             }
         });
     });
@@ -14231,89 +14312,6 @@ function scrollActivate() {
             $el.find('.activate-box').addClass(IS_SHOWN);
         }, 100);
     }
-
-    function startPointSlider() {
-        pointSliderInitialized = true;
-        var time = 2;
-        var $bar = $('.js-point-progress div'),
-            isPause = void 0,
-            tick = void 0,
-            percentTime = void 0;
-
-        $('#js-point-slider').slick({
-            arrows: false,
-            dots: false,
-            fade: true,
-            autoplay: true,
-            autoplaySpeed: 10000,
-            pauseOnHover: false,
-            infinite: true,
-            speed: 1000,
-            cssEase: 'ease-out',
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    centerMode: false
-                }
-            }]
-        });
-
-        function startProgressbar() {
-            resetProgressbar();
-            percentTime = 0;
-            isPause = false;
-            tick = setInterval(interval, 30);
-        }
-        function interval() {
-            if (isPause === false) {
-                percentTime += 1 / (time + 0.1);
-                $bar.css({
-                    width: percentTime + '%'
-                });
-                if (percentTime >= 100) {
-                    $('#js-point-slider').slick('slickNext');
-                    startProgressbar();
-                }
-            }
-        }
-        function resetProgressbar() {
-            $bar.css({
-                width: 0 + '%'
-            });
-            clearTimeout(tick);
-        }
-        startProgressbar();
-
-        function setPointTitle(index) {
-            var $pointJaTitle = $('#js-point-title-ja');
-
-            switch (index) {
-                case 1:
-                    $pointJaTitle.text('理想を叶える、自由設計');
-                    break;
-                case 2:
-                    $pointJaTitle.text('災害に備えた、耐震設計');
-                    break;
-                case 3:
-                    $pointJaTitle.text('良心的な、価格設定');
-                    break;
-                default:
-                    $pointJaTitle.text('好きな場所で、家を建てる');
-                    break;
-            }
-
-            $pointJaTitle.fadeIn(1000);
-        }
-
-        $('#js-point-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-            $('#js-point-title-ja').empty();
-            $('#js-point-title-ja').hide();
-
-            setPointTitle(nextSlide);
-
-            $('#js-point-current').text(nextSlide + 1);
-        });
-    }
 }
 
 /***/ }),
@@ -14326,25 +14324,22 @@ function scrollToElement() {
     var $trigger = $('.js-scroll');
 
     $trigger.on('click', function (e) {
-        // only smooth scroll if in home page, otherwise act as a normal anchor
-        if (window.location.pathname == '/') {
-            e.preventDefault();
+        e.preventDefault();
 
-            // if menu item is clicked, close menu first
-            if ($(e.currentTarget).closest('li').hasClass('menu__item')) {
-                $('#js-toggle-menu').click();
-            }
+        // if menu item is clicked, close menu first
+        if ($(e.currentTarget).closest('li').hasClass('menu__item')) {
+            $('#js-toggle-menu').click();
+        }
 
-            var $target = $($(e.currentTarget).attr('href').replace('/', '')),
-                offset = 0;
+        var $target = $($(e.currentTarget).attr('href').replace('/', '')),
+            offset = 0;
 
-            if ($(e.currentTarget).data('offset') != undefined) {
-                offset = $(e.currentTarget).data('offset');
-            }
+        if ($(e.currentTarget).data('offset') != undefined) {
+            offset = $(e.currentTarget).data('offset');
+        }
 
-            if ($target != '') {
-                $('html, body').stop().animate({ scrollTop: $target.offset().top + offset }, 1000);
-            }
+        if ($target != '') {
+            $('html, body').stop().animate({ scrollTop: $target.offset().top + offset }, 1000);
         }
     });
 }

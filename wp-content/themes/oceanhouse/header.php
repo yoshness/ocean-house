@@ -23,7 +23,11 @@
 
 		<title>Ocean House</title>
 
-		<link rel="shortcut icon" type="image/x-icon" href="<?php echo IMAGE_URL; ?>favicon.ico"/>
+		<meta property="og:title" content="好きなところに住もう。理想の注文住宅はオーシャンハウスで">
+		<meta property="og:url" content="" />
+		<meta property="og:site_name" content="Ocean House" />
+		<meta property="og:image" content="<?php echo IMAGE_URL; ?>ogp.png">
+		<link rel="shortcut icon" type="image/png" href="<?php echo IMAGE_URL; ?>favicon.png"/>
 		
 		<?php wp_head(); ?>
 	</head>

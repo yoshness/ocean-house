@@ -12,11 +12,11 @@ get_header();
 			<a href="<?php echo HOME_URL; ?>">
 				<img class="logo__img" src="<?php echo IMAGE_URL; ?>logo.png">
 			</a>
-			<a class="logo__scroll" href="#">SCROLL</a>
+			<a class="logo__scroll js-scroll" href="#js-intro-section">SCROLL</a>
 		</div>
 		<div class="banner__img" style="background-image: url(<?php echo IMAGE_URL; ?>concept/banner.jpg);"></div>
 	</div>
-	<section class="l-concept__intro js-scroll-activate">
+	<section class="l-concept__intro js-scroll-activate" id="js-intro-section">
 		<div class="l-concept__intro-text">
 			<h2 class="section-title">
 				<span class="section-title__ja blur-text js-separate-letters">オーシャンハウスとは</span>
@@ -27,7 +27,7 @@ get_header();
 		</div>
 		<img src="<?php echo IMAGE_URL; ?>concept/intro.jpg" alt="">
 	</section>
-	<section class="l-concept__thoughts u-flex js-scroll-activate">
+	<section class="l-concept__thoughts u-flex js-scroll-activate" id="our-thoughts-section">
 		<div class="l-concept__thoughts-content activate-box">
 			<h2 class="section-title">
 				<span class="section-title__en blur-text js-separate-letters">OUR THOUGHTS</span>
@@ -38,23 +38,21 @@ get_header();
 					<strong>その壱. テキストテキストテキスト</strong><br>
 					テキストが入ります、テキストが入ります、テキストが入ります、
 				</p>
-				<div class="slide-down js-slide-down">
-					<p>
-						<strong>その弐. テキストテキストテキストテキスト</strong><br>
-						テキストが入ります、テキストが入ります、テキストが入ります、
-					</p>
-					<p>
-						<strong>その参. テキストテキストテキスト</strong><br>
-						テキストが入ります、テキストが入ります、テキストが入ります、
-					</p>
-				</div>
+				<p>
+					<strong>その弐. テキストテキストテキストテキスト</strong><br>
+					テキストが入ります、テキストが入ります、テキストが入ります、
+				</p>
+				<p>
+					<strong>その参. テキストテキストテキスト</strong><br>
+					テキストが入ります、テキストが入ります、テキストが入ります、
+				</p>
 			</div>
 		</div>
 		<div class="l-concept__thoughts-image">
 			<img src="<?php echo IMAGE_URL; ?>concept/thoughts.jpg">
 		</div>
 	</section>
-	<section class="l-concept__order u-flex js-scroll-activate">
+	<section class="l-concept__order u-flex js-scroll-activate" id="order-made-section">
 		<div class="l-concept__order-content activate-box">
 			<h2 class="section-title">
 				<span class="section-title__en blur-text js-separate-letters">ORDER MADE</span>
@@ -66,9 +64,7 @@ get_header();
 				</p>
 				<p >
 					テキストが入ります、テキストが入ります、テキストが入ります、<br>
-					<div class="slide-down js-slide-down">
-						テキストが入ります、テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、テキストが入ります、
-					</div>
+					テキストが入ります、テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、テキストが入ります、
 				</p>
 			</div>
 		</div>
@@ -76,7 +72,7 @@ get_header();
 			<img src="<?php echo IMAGE_URL; ?>concept/order.jpg">
 		</div>
 	</section>
-	<section class="l-concept__specs js-scroll-activate">
+	<section class="l-concept__specs js-scroll-activate" id="strength-section">
 		<div class="l-container">
 			<h2 class="section-title">
 				<span class="section-title__ja blur-text js-separate-letters">技術と環境性能</span>
@@ -115,7 +111,7 @@ get_header();
 			</ul>
 		</div>
 	</section>
-	<section class="l-concept__support js-scroll-activate">
+	<section class="l-concept__support js-scroll-activate" id="after-support-section">
 		<div class="l-container">
 			<h2 class="section-title">
 				<span class="section-title__ja blur-text js-separate-letters">安心のアフターサポート</span>
@@ -123,8 +119,8 @@ get_header();
 			<p class="activate-text">
 				当社アフターサービス基準に則り、最大30年間にわたり住宅品質を保証しています。<br>お客様が保証期間の延長をご希望される場合、延長保証点検および、<br>有料メンテナンス工事を実施することで、基礎、躯体などの長期保証部位について、<br>さらに10年間延長し、お引き渡しより最大30年保証いたします。
 			</p>
-			<img src="<?php echo IMAGE_URL; ?>concept/support.jpg">
 		</div>
+		<img src="<?php echo IMAGE_URL; ?>concept/support.jpg">
 	</section>
 	<section class="l-concept__flow js-scroll-activate">
 		<div class="l-container">
