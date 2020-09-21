@@ -51,6 +51,7 @@
     letter-spacing: .1em;
 
     color: #fff;
+    text-shadow: 1px 1px #000;
 
     @include max-screen($breakpoint-mobile) {
         font-size: 27px;

@@ -14223,20 +14223,31 @@ function initSliders() {
 								startProgressbar();
 
 								function setPointTitle(index) {
-												var $pointJaTitle = $('#js-point-title-ja');
+												var $pointJaTitle = $('#js-point-title-ja'),
+												    $pointDesc = $('.js-point-description'),
+												    $pointDesc1 = $('#js-point-description-1'),
+												    $pointDesc2 = $('#js-point-description-2'),
+												    $pointDesc3 = $('#js-point-description-3'),
+												    $pointDesc4 = $('#js-point-description-4');
+
+												$pointDesc.hide();
 
 												switch (index) {
 																case 1:
 																				$pointJaTitle.text('理想を叶える、自由設計');
+																				$pointDesc2.fadeIn(1000);
 																				break;
 																case 2:
 																				$pointJaTitle.text('災害に備えた、耐震設計');
+																				$pointDesc3.fadeIn(1000);
 																				break;
 																case 3:
 																				$pointJaTitle.text('良心的な、価格設定');
+																				$pointDesc4.fadeIn(1000);
 																				break;
 																default:
 																				$pointJaTitle.text('好きな場所で、家を建てる');
+																				$pointDesc1.fadeIn(1000);
 																				break;
 												}
 

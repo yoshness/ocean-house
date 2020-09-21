@@ -88,16 +88,39 @@ get_header();
 				<span class="section-title__en blur-text js-separate-letters">POINT</span>
 				<span class="section-title__ja blur-text js-separate-letters" id="js-point-title-ja">好きな場所で、家を建てる</span>
 			</h2>
-			<div class="activate-text">
+			<div class="activate-text l-index__point-description js-point-description" id="js-point-description-1">
 				<p>
-					テキストが入ります、<br>テキストが入ります、テキストが入ります、テキストが入ります、
+					好きなところに、住もう。​<br>オーシャンハウスのコンセプト。
 				</p>
 				<p>
-					テキストが入ります、テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、
+					特に立地については施主様と打ち合わせて、​<br>とことんこだわり抜きます。
 				</p>
 				<p>
-					テキストが入ります、テキストが入ります、<br>テキストが入ります、テキストが入ります、テキストが入ります、<br>テキストが入ります、
+					その土地での生活は快適か、​<br>趣味を楽しむために最適か、将来を見据えた場所か――。
 				</p>
+				<p>
+					住まいが「本当に好きなところ」になるよう、​<br>様々な角度から検証の上で、候補地を提案します。
+				</p>
+			</div>
+			<div class="l-index__point-description js-point-description" id="js-point-description-2">
+				<p>
+					オーシャンハウスが目指すのは、​<br>これからの時代を考えた住まいづくりです。
+				</p>
+				<p>お客様の理想をまずは徹底してヒアリングし、​<br>プロの建築士がご提案させていただきます。</p>
+				<p>すべての空間に意味を持たせ、​<br>スペースを最大限に有効活用します。</p>
+			</div>
+			<div class="l-index__point-description js-point-description" id="js-point-description-3">
+				<p>災害大国である日本。​<br>地震や台風、火災、水害から​<br>家と入居者の安全を守ることはもはや当たり前です。</p>
+				<p>オーシャンハウスは注文住宅のスペシャリストが​<br>技術力を駆使して設計を手掛けます。</p>
+				<p>お客様が長く安心して住み続けられるよう、​<br>災害への対策は徹底しています。</p>
+			</div>
+			<div class="l-index__point-description js-point-description" id="js-point-description-4">
+				<p>
+					住宅に理想はあるが、叶えられない、​<br>ある程度の妥協は仕方がない――。
+				</p>
+				<p>​しかし、できることなら理想を叶えたい。​<br>誰もがそう思うことでしょう。</p>
+				<p>理想の住宅が完成したときに、​<br>心から喜び、満足していただきたい。</p>
+				<p>​その思いを原動力に、オーシャンハウスは​<br>理想が叶う独自の価格設計を実現いたしました。</p>
 			</div>
 		</div>
 	</section>

@@ -687,6 +687,7 @@ textarea {
   text-align: center;
   letter-spacing: .1em;
   color: #fff;
+  text-shadow: 1px 1px #000;
 }
 
 @media screen and (max-width: 767px) {
@@ -2125,6 +2126,10 @@ textarea {
   }
 }
 
+.l-index__point-description:not(:nth-child(2)) {
+  display: none;
+}
+
 .l-index__works {
   padding: 150px 0;
   text-align: center;
@@ -2306,10 +2311,10 @@ textarea {
 .l-index__reasons-item {
   font-family: ヒラギノ明朝 Pro W3, YuMincho, 游明朝, "Noto Serif JP", Times New Roman, Hiragino Mincho ProN, HGS明朝B, ＭＳ Ｐ明朝, serif, Meiryo, Sawarabi Mincho, メイリオ, ＭＳ Ｐゴシック, sans-serif;
   position: relative;
+  overflow: hidden;
   width: 48%;
   margin-bottom: 45px;
   letter-spacing: .1em;
-  overflow: hidden;
 }
 
 @media screen and (max-width: 767px) {

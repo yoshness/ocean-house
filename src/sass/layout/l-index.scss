@@ -178,6 +178,12 @@
     }
 }
 
+.l-index__point-description {
+    &:not(:nth-child(2)) {
+        display: none;
+    }
+}
+
 .l-index__works {
     padding: 150px 0;
 
@@ -363,12 +369,12 @@
 
     position: relative;
 
+    overflow: hidden;
+
     width: 48%;
     margin-bottom: 45px;
 
     letter-spacing: .1em;
-
-    overflow: hidden;
 
     @include max-screen($breakpoint-mobile) {
         width: 100%;
