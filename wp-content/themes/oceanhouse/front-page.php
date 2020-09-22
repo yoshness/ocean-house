@@ -156,7 +156,7 @@ get_header();
 			</li>
 		</ul>
 	</section>
-	<section class="l-index__people js-scroll-activate">
+	<section class="l-index__people js-scroll-activate" style="display: none;">
 		<div class="l-container">
 			<h2 class="section-title">
 				<span class="section-title__ja blur-text js-separate-letters">理想を叶える、スペシャリスト</span>
